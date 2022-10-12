@@ -117,16 +117,3 @@ h4 {
 img {
     vertical-align: middle;
 }
-
-.contactInfo {
-    display: flex;
-    justify-content: center;
-}
-
-.memberList {
-    list-style-type: square;
-}
-
-.memberList li {
-    padding-bottom: 1em;
-}
