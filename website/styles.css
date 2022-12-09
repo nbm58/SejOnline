@@ -1,29 +1,77 @@
+:root {
+    --primary: #fac01a;
+    --dark: #002454;
+    --body: #888;
+    --white: #ffffff;
+    --box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+}
+
+:root {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: black;
+    background-color: whitesmoke;
     margin: 0px 0px;
-    color: rgb(131, 238, 109);
+    color: rgb(0, 36, 84);
+    margin: 0;
+    font-family: var(--bs-font-sans-serif);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    font-family: "Sora", sans-serif;
+    line-height: 1.7;
+    color: var(--body);
 }
 
 section {
     display: flex;
-    color: rgb(131, 238, 109);
+    color: rgb(0, 36, 84);
     margin: 0px 0px;
     width: 100%;
-    height: 100vh;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: top;
 }
 
 hr {
     border: 0px;
     height: 1px;
-    background-color: rgb(131, 238, 109);
+    background-color: rgb(200, 155, 28);
+    padding: 0% 0%;
+    margin: 0% 0%;
 }
 
 .titleDivider {
@@ -40,12 +88,12 @@ nav {
     position: sticky;
     top: 0px;
     justify-content: space-between;
-    background-color: #333;
+    background-color: rgb(0, 4, 33);
 }
 
 .buttons a {
     display: block;
-    color: rgb(131, 238, 109);
+    color: white;
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
@@ -60,7 +108,7 @@ nav {
     justify-content: space-between;
     padding: 5px;
     display: block;
-    color: rgb(131, 238, 109);
+    color: white;
     text-align: center;
     text-decoration: none;
 }
@@ -73,21 +121,21 @@ nav {
     display: none;
     position: absolute;
     top: 50px;
-    background-color: #333;
+    background-color: rgb(0, 4, 33);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
   
 .dropdown-content a {
-    color: rgb(131, 238, 109);
+    color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
   
 .dropdown-content a:hover {
-    background-color: rgb(131, 238, 109);
+    background-color: rgb(200, 155, 28);
 }
   
 .dropdown:hover .dropdown-content {
@@ -95,7 +143,7 @@ nav {
 }
   
 .dropdown:hover .dropButton {
-    background-color: rgb(131, 238, 109);
+    background-color: rgb(200, 155, 28);
     color: black;
 }
 
@@ -103,17 +151,115 @@ nav {
     width: 40px;
     height: 40px;
     margin-right: 10px;
+    vertical-align: middle;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+}
+
+/* make it so when you hover over homeLink the image turns black */
+.homeLink:hover .logo {
+    filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
 }
 
 nav a:hover {
-    background-color: rgb(131, 238, 109);
+    background-color: rgb(200, 155, 28);
     color: black;
 }
 
 h4 {
-    color: rgb(131, 238, 109, 0.6);
+    color: rgb(0, 36, 84);
 }
 
-img {
-    vertical-align: middle;
+h2 {
+    color: rgb(0, 36, 84);
+    padding: 1% 10%;
+    text-indent: 2em;
+    font-size: large;
+}
+
+h1 {
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+}
+
+.teamCardContainer {
+    text-align: center!important;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.teamMemberCard {
+    box-shadow: var(--box-shadow);
+    background-color: var(--white);
+    padding: 25px;
+    /* add spacing between cards */
+    margin: 1rem;
+}
+
+.teamMemberImage {
+    object-fit: scale-down;
+    width: 100px;
+    height: 100px;
+    border-radius: 30%;
+}
+
+div {
+    display: block;
+}
+
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.technology {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.techLogo {
+    height: 100px;
+    margin: 10px;
+}
+
+.projectPlanImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.table {
+    background-color: transparent;
+    accent-color: transparent;
+    color: #212529;
+    width: 80%;
+    margin-bottom: 1rem;
+    vertical-align: top;
+    border-color: #dee2e6;
+}
+
+table {
+    caption-side: bottom;
+    border-collapse: collapse;
+    text-indent: initial;
+    border-spacing: 2px;
+    display: table;
+}
+
+.container {
+    width: 100%;
+    padding-right: 10%;
+    padding-left: 10%;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center!important;
+    padding-top: 1.5rem!important;
+    text-align: center!important;
+}
+
+a {
+    text-decoration: none;
 }
