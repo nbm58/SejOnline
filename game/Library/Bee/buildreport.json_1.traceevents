@@ -1,0 +1,715 @@
+{ "pid": 0, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "BeeDriver" } },
+{ "pid": 0, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-2" } },
+{ "pid": 0, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
+{ "pid": 0, "tid": 1, "ts": 1676388800332128, "dur": 466757, "ph": "X", "name": "Build Player", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1676388800332322, "dur": 1596, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1676388800333919, "dur": 463361, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1676388800797282, "dur": 1603, "ph": "X", "name": "Finish", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1676388800799187, "dur": 6, "ph": "X", "name": "", "args": {} },
+{ "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
+,{ "pid":12345, "tid":0, "ts":1676388800348848, "dur":804, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800349656, "dur":70, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
+,{ "pid":12345, "tid":0, "ts":1676388800349742, "dur":13, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
+,{ "pid":12345, "tid":0, "ts":1676388800349755, "dur":450, "ph":"X", "name": "Tundra",  "args": { "detail":"BuildQueueInit" }}
+,{ "pid":12345, "tid":0, "ts":1676388800350224, "dur":378, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800350602, "dur":1, "ph":"X", "name": "SortWorkingStack",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791475, "dur":407, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791882, "dur":9, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791891, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791892, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791896, "dur":0, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791897, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791901, "dur":0, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791901, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791905, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791906, "dur":2, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791909, "dur":0, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791909, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791913, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791914, "dur":2, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791916, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791917, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791921, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791922, "dur":3, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791925, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791926, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791930, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791931, "dur":3, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791934, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791935, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791939, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791940, "dur":3, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791943, "dur":0, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791943, "dur":3, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791946, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791947, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791951, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791952, "dur":3, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791955, "dur":0, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791955, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791959, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791960, "dur":3, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791963, "dur":0, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791963, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791967, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791968, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791972, "dur":0, "ph":"X", "name": "SharedResourceDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800791981, "dur":1, "ph":"X", "name": "BuildQueueDestroyTail",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800792026, "dur":963, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1676388800350114, "dur":492, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1676388800350607, "dur":3941, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1676388800354558, "dur":0, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1676388800354560, "dur":75, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1676388800354638, "dur":2, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1676388800354640, "dur":46, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1676388800354689, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1676388800355107, "dur":1447, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1676388800356556, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":1, "ts":1676388800356619, "dur":32, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1676388800356691, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1676388800356847, "dur":46231, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":1, "ts":1676388800403110, "dur":35, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1676388800403145, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1676388800403185, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1676388800403188, "dur":35777, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1676388800439006, "dur":54, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1676388800439061, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1676388800439126, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1676388800439130, "dur":19645, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1676388800458810, "dur":34, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1676388800458845, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1676388800458883, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1676388800458887, "dur":42749, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1676388800501669, "dur":31, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1676388800501700, "dur":30, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1676388800501733, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1676388800501737, "dur":112048, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1676388800613824, "dur":76589, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":1, "ts":1676388800690417, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1676388800690422, "dur":584, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":1, "ts":1676388800691031, "dur":100493, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1676388800350136, "dur":477, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1676388800350613, "dur":3955, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1676388800354568, "dur":280, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":2, "ts":1676388800354848, "dur":51, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1676388800354902, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1676388800418861, "dur":1018, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":2, "ts":1676388800419921, "dur":45, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1676388800419966, "dur":35, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1676388800420004, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1676388800420008, "dur":31765, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1676388800451809, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1676388800451848, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1676388800451885, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1676388800451888, "dur":22286, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1676388800474209, "dur":28, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1676388800474237, "dur":29, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1676388800474269, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1676388800474273, "dur":27054, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1676388800501367, "dur":37, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1676388800501404, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1676388800501442, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1676388800501446, "dur":37726, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1676388800539210, "dur":39, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":2, "ts":1676388800539249, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1676388800539286, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1676388800539291, "dur":58155, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":2, "ts":1676388800597482, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":2, "ts":1676388800597524, "dur":31, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1676388800597559, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1676388800597563, "dur":37844, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":2, "ts":1676388800635444, "dur":156084, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1676388800350129, "dur":481, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1676388800350610, "dur":3946, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1676388800354557, "dur":189, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":3, "ts":1676388800354746, "dur":101, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1676388800354850, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1676388800403851, "dur":626, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":3, "ts":1676388800404507, "dur":28, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1676388800404535, "dur":24, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1676388800404562, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1676388800404565, "dur":23774, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1676388800428379, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1676388800428420, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1676388800428460, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1676388800428465, "dur":37166, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1676388800465670, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1676388800465708, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1676388800465745, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1676388800465749, "dur":28390, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1676388800494176, "dur":39, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1676388800494215, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1676388800494256, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1676388800494263, "dur":24993, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1676388800519295, "dur":174286, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":3, "ts":1676388800693582, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1676388800693635, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1676388800693639, "dur":660, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":3, "ts":1676388800694326, "dur":97205, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1676388800350157, "dur":459, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1676388800350616, "dur":3936, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1676388800354557, "dur":149, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":4, "ts":1676388800354707, "dur":52, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1676388800354762, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1676388800355670, "dur":1021, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":4, "ts":1676388800356733, "dur":33, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online.exe" }}
+,{ "pid":12345, "tid":4, "ts":1676388800356766, "dur":30, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1676388800356798, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1676388800356800, "dur":47012, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online.exe" }}
+,{ "pid":12345, "tid":4, "ts":1676388800403860, "dur":45, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1676388800403905, "dur":35, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1676388800403943, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1676388800403947, "dur":82175, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1676388800486162, "dur":49, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1676388800486211, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1676388800486251, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1676388800486257, "dur":25928, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1676388800512226, "dur":40, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":4, "ts":1676388800512267, "dur":39, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1676388800512310, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1676388800512316, "dur":49695, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":4, "ts":1676388800562047, "dur":37, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":4, "ts":1676388800562085, "dur":32, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1676388800562121, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1676388800562126, "dur":136668, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":4, "ts":1676388800698819, "dur":92714, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1676388800350177, "dur":443, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1676388800350620, "dur":3934, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1676388800354556, "dur":273, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":5, "ts":1676388800354829, "dur":60, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1676388800354891, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1676388800418490, "dur":949, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":5, "ts":1676388800419483, "dur":43, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1676388800419526, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1676388800419564, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1676388800419568, "dur":25355, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1676388800444956, "dur":35, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1676388800444992, "dur":30, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1676388800445025, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1676388800445030, "dur":31261, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1676388800476330, "dur":35, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1676388800476365, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1676388800476406, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1676388800476410, "dur":48368, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1676388800524815, "dur":44547, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/Unity.Services.Core.Internal.dll" }}
+,{ "pid":12345, "tid":5, "ts":1676388800569362, "dur":42, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1676388800569409, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1676388800569413, "dur":1544, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/Unity.Services.Core.Internal.dll" }}
+,{ "pid":12345, "tid":5, "ts":1676388800570991, "dur":37, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":5, "ts":1676388800571029, "dur":31, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1676388800571063, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1676388800571066, "dur":123316, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":5, "ts":1676388800694407, "dur":97125, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1676388800350194, "dur":430, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1676388800350624, "dur":3940, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1676388800354566, "dur":127, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":6, "ts":1676388800354693, "dur":44, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1676388800354740, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1676388800355511, "dur":1176, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":6, "ts":1676388800356726, "dur":59, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":6, "ts":1676388800356785, "dur":25, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1676388800356813, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1676388800356815, "dur":1383, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":6, "ts":1676388800358230, "dur":30, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1676388800358260, "dur":28, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1676388800358291, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1676388800358413, "dur":45023, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1676388800403481, "dur":49, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1676388800403530, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1676388800403567, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1676388800403570, "dur":21328, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1676388800424934, "dur":108378, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":6, "ts":1676388800533313, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1676388800533375, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1676388800533380, "dur":1494, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":6, "ts":1676388800534912, "dur":22959, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/Unity.Services.Core.Configuration.dll" }}
+,{ "pid":12345, "tid":6, "ts":1676388800557871, "dur":43, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1676388800557918, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1676388800557922, "dur":670, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/Unity.Services.Core.Configuration.dll" }}
+,{ "pid":12345, "tid":6, "ts":1676388800558630, "dur":39, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":6, "ts":1676388800558670, "dur":32, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1676388800558705, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1676388800558709, "dur":31504, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":6, "ts":1676388800590256, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":6, "ts":1676388800590294, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1676388800590352, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1676388800590358, "dur":88903, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":6, "ts":1676388800679289, "dur":112188, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1676388800350220, "dur":408, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1676388800350628, "dur":3922, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1676388800354556, "dur":187, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":7, "ts":1676388800354743, "dur":80, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1676388800354844, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1676388800402933, "dur":953, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":7, "ts":1676388800403924, "dur":32, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1676388800403956, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1676388800403995, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1676388800403997, "dur":23518, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1676388800427553, "dur":35, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1676388800427589, "dur":32, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1676388800427624, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1676388800427628, "dur":35236, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1676388800462904, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1676388800462943, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1676388800463018, "dur":7, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1676388800463029, "dur":42246, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1676388800505312, "dur":39, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1676388800505351, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1676388800505388, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1676388800505392, "dur":29868, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1676388800535298, "dur":731, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/Unity.Services.Core.Analytics.dll" }}
+,{ "pid":12345, "tid":7, "ts":1676388800536030, "dur":40, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1676388800536074, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1676388800536077, "dur":990, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/Unity.Services.Core.Analytics.dll" }}
+,{ "pid":12345, "tid":7, "ts":1676388800537102, "dur":39, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":7, "ts":1676388800537141, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1676388800537177, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1676388800537181, "dur":171018, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":7, "ts":1676388800708225, "dur":83304, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1676388800350236, "dur":396, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1676388800350632, "dur":3917, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1676388800354556, "dur":192, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":8, "ts":1676388800354748, "dur":83, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1676388800354834, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1676388800359189, "dur":44225, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":8, "ts":1676388800403459, "dur":47, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1676388800403506, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1676388800403546, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1676388800403549, "dur":37297, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1676388800440885, "dur":36, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1676388800440921, "dur":32, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1676388800440957, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1676388800440961, "dur":23031, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1676388800464028, "dur":39, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1676388800464068, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1676388800464108, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1676388800464112, "dur":24875, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1676388800489028, "dur":49, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1676388800489078, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1676388800489119, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1676388800489142, "dur":123555, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1676388800613073, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":8, "ts":1676388800613125, "dur":123, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1676388800613251, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1676388800613255, "dur":128112, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":8, "ts":1676388800741402, "dur":50084, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1676388800350257, "dur":377, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1676388800350634, "dur":3921, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1676388800354557, "dur":154, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":9, "ts":1676388800354711, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1676388800354779, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1676388800356122, "dur":615, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":9, "ts":1676388800356769, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":9, "ts":1676388800356825, "dur":29, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1676388800356856, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1676388800357006, "dur":46019, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":9, "ts":1676388800403059, "dur":28, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1676388800403087, "dur":27, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1676388800403116, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1676388800403119, "dur":25636, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1676388800428826, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1676388800428868, "dur":29, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1676388800428899, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1676388800428903, "dur":43742, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1676388800472687, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1676388800472728, "dur":82, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1676388800472814, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1676388800472817, "dur":76935, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1676388800549788, "dur":35, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":9, "ts":1676388800549823, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1676388800549860, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1676388800549864, "dur":64290, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":9, "ts":1676388800614192, "dur":114, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
+,{ "pid":12345, "tid":9, "ts":1676388800614306, "dur":50, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1676388800614360, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1676388800615226, "dur":618, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
+,{ "pid":12345, "tid":9, "ts":1676388800615884, "dur":37, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":9, "ts":1676388800615925, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1676388800615928, "dur":2777, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":9, "ts":1676388800618742, "dur":711, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":9, "ts":1676388800619453, "dur":39, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1676388800619495, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1676388800619499, "dur":2063, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":9, "ts":1676388800621604, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/level1.resS" }}
+,{ "pid":12345, "tid":9, "ts":1676388800621649, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1676388800621652, "dur":891, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/level1.resS" }}
+,{ "pid":12345, "tid":9, "ts":1676388800622576, "dur":34, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/level0" }}
+,{ "pid":12345, "tid":9, "ts":1676388800622614, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1676388800622617, "dur":1388, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/level0" }}
+,{ "pid":12345, "tid":9, "ts":1676388800624043, "dur":104, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/boot.config" }}
+,{ "pid":12345, "tid":9, "ts":1676388800624147, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1676388800624185, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1676388800624187, "dur":582, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/boot.config" }}
+,{ "pid":12345, "tid":9, "ts":1676388800624802, "dur":166671, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1676388800350280, "dur":358, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1676388800350638, "dur":3921, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1676388800354560, "dur":267, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":10, "ts":1676388800354827, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1676388800354887, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1676388800414318, "dur":669, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":10, "ts":1676388800415026, "dur":40, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1676388800415066, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1676388800415104, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1676388800415108, "dur":23763, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1676388800438919, "dur":47, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1676388800438967, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1676388800439032, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1676388800439036, "dur":28647, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1676388800467723, "dur":29, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1676388800467753, "dur":35, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1676388800467792, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1676388800467796, "dur":27246, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1676388800495169, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1676388800495234, "dur":44, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1676388800495282, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1676388800495286, "dur":24848, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1676388800520210, "dur":1236, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/Unity.Services.Core.Threading.dll" }}
+,{ "pid":12345, "tid":10, "ts":1676388800521446, "dur":45, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1676388800521495, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1676388800521500, "dur":861, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/Unity.Services.Core.Threading.dll" }}
+,{ "pid":12345, "tid":10, "ts":1676388800522418, "dur":24361, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
+,{ "pid":12345, "tid":10, "ts":1676388800546779, "dur":58, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1676388800546842, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1676388800546847, "dur":732, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
+,{ "pid":12345, "tid":10, "ts":1676388800547615, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":10, "ts":1676388800547653, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1676388800547692, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1676388800547696, "dur":116553, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":10, "ts":1676388800664286, "dur":127192, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1676388800350287, "dur":353, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1676388800350640, "dur":3921, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1676388800354563, "dur":151, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":11, "ts":1676388800354714, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1676388800354780, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1676388800358816, "dur":43647, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":11, "ts":1676388800402499, "dur":28, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1676388800402528, "dur":72, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1676388800402604, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1676388800402665, "dur":19211, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1676388800421913, "dur":44, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1676388800421958, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1676388800422014, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1676388800422019, "dur":39499, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1676388800461556, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1676388800461595, "dur":35, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1676388800461634, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1676388800461641, "dur":24141, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1676388800485823, "dur":43, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":11, "ts":1676388800485866, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1676388800485907, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1676388800485914, "dur":30358, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":11, "ts":1676388800516307, "dur":64688, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":11, "ts":1676388800580995, "dur":43, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1676388800581042, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1676388800581046, "dur":2410, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":11, "ts":1676388800583493, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":11, "ts":1676388800583531, "dur":171, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1676388800583706, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1676388800583710, "dur":93079, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":11, "ts":1676388800676816, "dur":114711, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1676388800350308, "dur":335, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1676388800350643, "dur":3906, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1676388800354557, "dur":155, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":12, "ts":1676388800354713, "dur":55, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1676388800354772, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1676388800355835, "dur":744, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":12, "ts":1676388800356612, "dur":56, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":12, "ts":1676388800356669, "dur":24, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1676388800356695, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1676388800356697, "dur":46519, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":12, "ts":1676388800403259, "dur":33, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1676388800403293, "dur":24, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1676388800403320, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1676388800403322, "dur":37842, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1676388800441200, "dur":33, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1676388800441234, "dur":29, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1676388800441266, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1676388800441269, "dur":22257, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1676388800463565, "dur":36, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1676388800463602, "dur":32, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1676388800463638, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1676388800463642, "dur":36576, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1676388800500259, "dur":36, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1676388800500295, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1676388800500364, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1676388800500368, "dur":34154, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1676388800534567, "dur":950, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/Unity.Services.Core.Device.dll" }}
+,{ "pid":12345, "tid":12, "ts":1676388800535517, "dur":55, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1676388800535577, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1676388800535582, "dur":742, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/Unity.Services.Core.Device.dll" }}
+,{ "pid":12345, "tid":12, "ts":1676388800536355, "dur":35, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":12, "ts":1676388800536391, "dur":39, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1676388800536433, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1676388800536437, "dur":75117, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":12, "ts":1676388800611591, "dur":35, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":12, "ts":1676388800611626, "dur":32, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1676388800611662, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1676388800611666, "dur":179758, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":12, "ts":1676388800791451, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"Player" }}
+,{ "pid":12345, "tid":12, "ts":1676388800791452, "dur":0, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1676388800350323, "dur":323, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1676388800350646, "dur":3905, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1676388800354557, "dur":180, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":13, "ts":1676388800354737, "dur":77, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1676388800354842, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1676388800403450, "dur":674, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":13, "ts":1676388800404155, "dur":31, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1676388800404186, "dur":23, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1676388800404212, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1676388800404215, "dur":24398, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1676388800428671, "dur":101, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1676388800428773, "dur":38, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1676388800428834, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1676388800428838, "dur":81449, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1676388800510323, "dur":68132, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":13, "ts":1676388800578455, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1676388800578523, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1676388800578528, "dur":1151, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":13, "ts":1676388800579715, "dur":36, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":13, "ts":1676388800579752, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1676388800579789, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1676388800579793, "dur":40528, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":13, "ts":1676388800620357, "dur":34, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/resources.assets" }}
+,{ "pid":12345, "tid":13, "ts":1676388800620412, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1676388800620415, "dur":1302, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/resources.assets" }}
+,{ "pid":12345, "tid":13, "ts":1676388800621752, "dur":37, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/level1" }}
+,{ "pid":12345, "tid":13, "ts":1676388800621793, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1676388800621796, "dur":753, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/level1" }}
+,{ "pid":12345, "tid":13, "ts":1676388800622584, "dur":37, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":13, "ts":1676388800622625, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1676388800622628, "dur":1478, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":13, "ts":1676388800624144, "dur":167382, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1676388800350343, "dur":306, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1676388800350649, "dur":3908, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1676388800354557, "dur":198, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":14, "ts":1676388800354755, "dur":115, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1676388800354873, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1676388800409956, "dur":799, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":14, "ts":1676388800410794, "dur":69, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1676388800410864, "dur":32, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1676388800410900, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1676388800410903, "dur":42620, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1676388800453561, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1676388800453599, "dur":32, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1676388800453653, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1676388800453658, "dur":32551, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1676388800486250, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1676388800486288, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1676388800486326, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1676388800486330, "dur":23659, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1676388800510034, "dur":80154, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":14, "ts":1676388800590189, "dur":65, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1676388800590258, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1676388800590262, "dur":794, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":14, "ts":1676388800591087, "dur":36, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":14, "ts":1676388800591123, "dur":29, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1676388800591155, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1676388800591158, "dur":81438, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":14, "ts":1676388800672639, "dur":118887, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1676388800350372, "dur":282, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1676388800350654, "dur":3903, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1676388800354558, "dur":197, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":15, "ts":1676388800354756, "dur":94, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1676388800354852, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1676388800404097, "dur":577, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":15, "ts":1676388800404702, "dur":33, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1676388800404735, "dur":24, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1676388800404761, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1676388800404764, "dur":22044, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1676388800426834, "dur":26, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1676388800426860, "dur":23, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1676388800426885, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1676388800426889, "dur":23416, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1676388800450342, "dur":40, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1676388800450383, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1676388800450421, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1676388800450426, "dur":22005, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1676388800472471, "dur":37, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1676388800472508, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1676388800472548, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1676388800472553, "dur":36187, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1676388800508785, "dur":39727, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":15, "ts":1676388800548512, "dur":43, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1676388800548559, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1676388800548563, "dur":850, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":15, "ts":1676388800549450, "dur":40, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":15, "ts":1676388800549490, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1676388800549529, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1676388800549533, "dur":65133, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":15, "ts":1676388800614702, "dur":36, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":15, "ts":1676388800614746, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1676388800614805, "dur":830, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":15, "ts":1676388800615674, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/sharedassets1.assets" }}
+,{ "pid":12345, "tid":15, "ts":1676388800615716, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1676388800615719, "dur":632, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/sharedassets1.assets" }}
+,{ "pid":12345, "tid":15, "ts":1676388800616389, "dur":37, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":15, "ts":1676388800616430, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1676388800616433, "dur":2246, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":15, "ts":1676388800618718, "dur":104, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":15, "ts":1676388800618822, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1676388800618859, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1676388800618863, "dur":594, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":15, "ts":1676388800619494, "dur":37, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":15, "ts":1676388800619535, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1676388800619538, "dur":2661, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":15, "ts":1676388800622237, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/level0.resS" }}
+,{ "pid":12345, "tid":15, "ts":1676388800622281, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1676388800622284, "dur":963, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/level0.resS" }}
+,{ "pid":12345, "tid":15, "ts":1676388800623285, "dur":37, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":15, "ts":1676388800623326, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1676388800623329, "dur":870, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":15, "ts":1676388800624236, "dur":167238, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1676388800350394, "dur":263, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1676388800350657, "dur":3901, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1676388800354560, "dur":253, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":16, "ts":1676388800354813, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1676388800354878, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1676388800414335, "dur":670, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":16, "ts":1676388800415048, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1676388800415086, "dur":32, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1676388800415121, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1676388800415124, "dur":59649, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1676388800474800, "dur":28, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1676388800474828, "dur":23, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1676388800474854, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1676388800474856, "dur":25610, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1676388800500504, "dur":35, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1676388800500539, "dur":121, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1676388800500663, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1676388800500667, "dur":22370, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1676388800523084, "dur":33445, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":16, "ts":1676388800556529, "dur":49, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1676388800556582, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1676388800556587, "dur":819, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":16, "ts":1676388800557442, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":16, "ts":1676388800557480, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1676388800557516, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1676388800557520, "dur":78671, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":16, "ts":1676388800636228, "dur":155247, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1676388800350419, "dur":241, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1676388800350660, "dur":3896, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1676388800354558, "dur":310, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":17, "ts":1676388800354868, "dur":40, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1676388800354911, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1676388800423486, "dur":606, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":17, "ts":1676388800424120, "dur":28, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":17, "ts":1676388800424148, "dur":25, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1676388800424176, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1676388800424178, "dur":99638, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":17, "ts":1676388800523860, "dur":819, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/Unity.Services.Core.Networking.dll" }}
+,{ "pid":12345, "tid":17, "ts":1676388800524680, "dur":43, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1676388800524728, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1676388800524733, "dur":686, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/Unity.Services.Core.Networking.dll" }}
+,{ "pid":12345, "tid":17, "ts":1676388800525453, "dur":941, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":17, "ts":1676388800526394, "dur":45, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1676388800526444, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1676388800526449, "dur":685, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":17, "ts":1676388800527169, "dur":938, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":17, "ts":1676388800528108, "dur":50, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1676388800528162, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1676388800528167, "dur":680, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":17, "ts":1676388800528883, "dur":25043, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/Unity.Services.Core.dll" }}
+,{ "pid":12345, "tid":17, "ts":1676388800553926, "dur":57, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1676388800553988, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1676388800553994, "dur":779, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/Unity.Services.Core.dll" }}
+,{ "pid":12345, "tid":17, "ts":1676388800554809, "dur":37, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":17, "ts":1676388800554846, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1676388800554883, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1676388800554888, "dur":34124, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":17, "ts":1676388800589057, "dur":97, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":17, "ts":1676388800589154, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1676388800589226, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1676388800589234, "dur":81643, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":17, "ts":1676388800670915, "dur":120568, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1676388800350432, "dur":231, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1676388800350663, "dur":3900, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1676388800354564, "dur":147, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":18, "ts":1676388800354712, "dur":80, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1676388800354834, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1676388800359331, "dur":44172, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":18, "ts":1676388800403539, "dur":32, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":18, "ts":1676388800403572, "dur":26, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1676388800403600, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1676388800403603, "dur":33941, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":18, "ts":1676388800437597, "dur":65, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":18, "ts":1676388800437662, "dur":86, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1676388800437753, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1676388800437757, "dur":36097, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":18, "ts":1676388800473891, "dur":39, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":18, "ts":1676388800473931, "dur":32, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1676388800473967, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1676388800473971, "dur":25664, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":18, "ts":1676388800499699, "dur":43, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":18, "ts":1676388800499742, "dur":35, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1676388800499782, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1676388800499787, "dur":43408, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":18, "ts":1676388800543231, "dur":36, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":18, "ts":1676388800543267, "dur":333, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1676388800543635, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1676388800543639, "dur":131845, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":18, "ts":1676388800675520, "dur":115965, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1676388800350447, "dur":218, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1676388800350665, "dur":3900, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1676388800354565, "dur":163, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":19, "ts":1676388800354728, "dur":71, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1676388800354838, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1676388800402256, "dur":1496, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":19, "ts":1676388800403794, "dur":45, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":19, "ts":1676388800403839, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1676388800403883, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1676388800403886, "dur":25057, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":19, "ts":1676388800429002, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":19, "ts":1676388800429069, "dur":98, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1676388800429171, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1676388800429175, "dur":21901, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":19, "ts":1676388800451115, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":19, "ts":1676388800451156, "dur":35, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1676388800451195, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1676388800451198, "dur":21523, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":19, "ts":1676388800472762, "dur":51, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":19, "ts":1676388800472813, "dur":39, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1676388800472855, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1676388800472859, "dur":23613, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":19, "ts":1676388800496505, "dur":39, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":19, "ts":1676388800496544, "dur":29, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1676388800496577, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1676388800496581, "dur":25728, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":19, "ts":1676388800522346, "dur":44512, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
+,{ "pid":12345, "tid":19, "ts":1676388800566859, "dur":356, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1676388800567226, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1676388800567236, "dur":2879, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
+,{ "pid":12345, "tid":19, "ts":1676388800570150, "dur":36, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":19, "ts":1676388800570186, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1676388800570237, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1676388800570240, "dur":147180, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":19, "ts":1676388800717444, "dur":74035, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1676388800350463, "dur":205, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1676388800350668, "dur":3892, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1676388800354561, "dur":187, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":20, "ts":1676388800354748, "dur":113, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1676388800354863, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1676388800409667, "dur":748, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":20, "ts":1676388800410453, "dur":39, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1676388800410492, "dur":32, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1676388800410545, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1676388800410549, "dur":21370, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1676388800431959, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1676388800431998, "dur":32, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1676388800432034, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1676388800432039, "dur":44508, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1676388800476587, "dur":36, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1676388800476623, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1676388800476659, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1676388800476662, "dur":27366, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1676388800504066, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1676388800504108, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1676388800504144, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1676388800504148, "dur":37651, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1676388800541840, "dur":53, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles SejOnline/Sej Online_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":20, "ts":1676388800541894, "dur":43, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1676388800541942, "dur":17, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1676388800541964, "dur":95395, "ph":"X", "name": "CopyFiles",  "args": { "detail":"SejOnline/Sej Online_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":20, "ts":1676388800637405, "dur":154127, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1676388800793839, "dur":1649, "ph":"X", "name": "ProfilerWriteOutput" }
+,{ "pid": 0, "tid": 1, "ts": 1676388800799254, "dur": 520, "ph": "X", "name": "backend_profiler0.traceevents", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1676388800799179, "dur": 609, "ph": "X", "name": "Write chrome-trace events", "args": {} },
