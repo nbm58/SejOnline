@@ -93,6 +93,12 @@ public class GameModel : MonoBehaviour
         pass1 = false;
         pass2 = false;
 
+        ButtonP1ThrowDie.GetComponent<Button>().interactable = false;
+        ButtonP2ThrowDie.GetComponent<Button>().interactable = false;
+
+        ButtonP1Decline.GetComponent<Button>().interactable = false;
+        ButtonP2Decline.GetComponent<Button>().interactable = false;
+
         Message.text = "Welcome!  To begin playing, Player 1 should either throw the wands or pass.";
         paragraph = 0;
         LongMessage.SetActive(false);
@@ -837,38 +843,38 @@ public class GameModel : MonoBehaviour
         // Display games or cumulative score based on the displayGames flag
         if (displayGames)
         {
-            P1Score.text = "Player 1 Score\n    " + player1Wins.ToString() + " Games";
-            P2Score.text = "Player 2 Score\n    " + player2Wins.ToString() + " Games";
+            P1Score.text = "Player 1 Score\n" + player1Wins.ToString() + " Games";
+            P2Score.text = "Player 2 Score\n" + player2Wins.ToString() + " Games";
         }
         else
         {
             int display1Score = player1Score + player1GameScore;
             if (display1Score < 1000)
-                P1Score.text = "Player 1 Score\n     " + display1Score.ToString() + " pts";
+                P1Score.text = "Player 1 Score\n" + display1Score.ToString() + " pts";
             else if (display1Score < 100000)
-                P1Score.text = "Player 1 Score\n    " + display1Score.ToString() + " pts";
+                P1Score.text = "Player 1 Score\n" + display1Score.ToString() + " pts";
             else
-                P1Score.text = "Player 1 Score\n   " + display1Score.ToString() + " pts";
+                P1Score.text = "Player 1 Score\n" + display1Score.ToString() + " pts";
 
             int display2Score = player2Score + player2GameScore;
             if (display2Score < 1000)
-                P2Score.text = "Player 2 Score\n     " + display2Score.ToString() + " pts";
+                P2Score.text = "Player 2 Score\n" + display2Score.ToString() + " pts";
             else if (display2Score < 100000)
-                P2Score.text = "Player 2 Score\n    " + display2Score.ToString() + " pts";
+                P2Score.text = "Player 2 Score\n" + display2Score.ToString() + " pts";
             else
-                P2Score.text = "Player 2 Score\n   " + display2Score.ToString() + " pts";
+                P2Score.text = "Player 2 Score\n" + display2Score.ToString() + " pts";
         }
 
         // and now update the current game scores
         if (player1GameScore < 10)
-            P1GameScore.text = "This Game\n      " + player1GameScore.ToString();
+            P1GameScore.text = "This Game\n" + player1GameScore.ToString();
         else
-            P1GameScore.text = "This Game\n     " + player1GameScore.ToString();
+            P1GameScore.text = "This Game\n" + player1GameScore.ToString();
 
         if (player2GameScore < 10)
-            P2GameScore.text = "     This Game\n           " + player2GameScore.ToString();
+            P2GameScore.text = "This Game\n" + player2GameScore.ToString();
         else
-            P2GameScore.text = "     This Game\n          " + player2GameScore.ToString();
+            P2GameScore.text = "This Game\n" + player2GameScore.ToString();
     }
 
     /* sets/resets the flag to display games won or cumulative score */
