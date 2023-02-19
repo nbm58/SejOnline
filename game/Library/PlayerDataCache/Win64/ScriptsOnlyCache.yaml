@@ -1,6 +1,11 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - ButtonUI
+    - DisplayDieSide
+    - DisplayWandSide
+    - EventHandler
+    - GameModel
     - MainMenu
     - OptionsMenu
     Unity.Rider.Editor.dll:
@@ -74,6 +79,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: OptionsMenu
     methodName: SetQuality
+  - assembly: Assembly-CSharp
+    fullTypeName: MainMenu
+    methodName: PlayGame
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -122,6 +130,42 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: ButtonUI
+    methodName: ThrowWands
+  - assembly: Assembly-CSharp
+    fullTypeName: ButtonUI
+    methodName: QuitSej
+  - assembly: Assembly-CSharp
+    fullTypeName: ButtonUI
+    methodName: ThrowDice
+  - assembly: Assembly-CSharp
+    fullTypeName: ButtonUI
+    methodName: Pass
+  - assembly: Assembly-CSharp
+    fullTypeName: ButtonUI
+    methodName: Decline
+  - assembly: Assembly-CSharp
+    fullTypeName: ButtonUI
+    methodName: Decline
+  - assembly: Assembly-CSharp
+    fullTypeName: ButtonUI
+    methodName: AboutSej
+  - assembly: Assembly-CSharp
+    fullTypeName: ButtonUI
+    methodName: Pass
+  - assembly: Assembly-CSharp
+    fullTypeName: ButtonUI
+    methodName: Instructions
+  - assembly: Assembly-CSharp
+    fullTypeName: ButtonUI
+    methodName: ToggleScore
+  - assembly: Assembly-CSharp
+    fullTypeName: ButtonUI
+    methodName: ThrowDice
+  - assembly: Assembly-CSharp
+    fullTypeName: ButtonUI
+    methodName: ThrowWands
   sceneClasses:
     Assets/Scenes/Game.unity:
     - Class: 1
@@ -144,9 +188,53 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1546}
+    - Class: 114
+      Script: {instanceID: 1548}
+    - Class: 114
+      Script: {instanceID: 2660}
+    - Class: 114
+      Script: {instanceID: 2888}
+    - Class: 114
+      Script: {instanceID: 3194}
+    - Class: 114
+      Script: {instanceID: 4020}
+    - Class: 114
+      Script: {instanceID: 5332}
+    - Class: 114
+      Script: {instanceID: 5948}
+    - Class: 114
+      Script: {instanceID: 6104}
+    - Class: 114
+      Script: {instanceID: 6460}
+    - Class: 114
+      Script: {instanceID: 7578}
+    - Class: 114
+      Script: {instanceID: 37906}
+    - Class: 114
+      Script: {instanceID: 37908}
+    - Class: 114
+      Script: {instanceID: 37910}
+    - Class: 114
+      Script: {instanceID: 37912}
+    - Class: 114
+      Script: {instanceID: 37914}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
     Assets/Scenes/Menu.unity:
     - Class: 1
@@ -268,19 +356,13 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: 4e36f2301023e91b8c368df17f061df0
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: BirdScript
-  - hash:
-      serializedVersion: 2
       Hash: 0dbc3be398b4869a5c8d0d8481ee402c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: LayoutElement
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 161fcc3c6f0f733cc586de505be044de
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainMenu
@@ -296,12 +378,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
     className: SkewTextExample
-  - hash:
-      serializedVersion: 2
-      Hash: 7da1fcc35d75dfb073cfa36f84721906
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PipeMoveScript
   - hash:
       serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
@@ -374,12 +450,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnBecameVisibleMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 0938864fa0e422bf7592f23213e9ca87
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PipeSpawnScript
   - hash:
       serializedVersion: 2
       Hash: 27e5341178f188b89bdc6495710b590c
@@ -652,12 +722,6 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
-      Hash: 50d5696cf8ce94bb45dbb17a8f7f90dc
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PipeMiddleScript
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -770,12 +834,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnPointerClickMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 97f48a787069737801af1c7deca38a0e
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: LogicScript
   - hash:
       serializedVersion: 2
       Hash: b6514f552bd2ee9e736a5678aa7f7de3
@@ -1256,6 +1314,36 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: b06a6722a567750f25ffc853b582e875
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DisplayWandSide
+  - hash:
+      serializedVersion: 2
+      Hash: 23bfbe09f1e97201631e45ce89590756
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ButtonUI
+  - hash:
+      serializedVersion: 2
+      Hash: 8cb6b7fc395aabaa9a887fbc811f6ae8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameModel
+  - hash:
+      serializedVersion: 2
+      Hash: 9fcb721d63c56446d896f403cf974d13
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EventHandler
+  - hash:
+      serializedVersion: 2
+      Hash: ec2ab94fd50b75c73f03b4246ee8d8f3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DisplayDieSide
   platform: 19
   scenePathNames:
   - Assets/Scenes/Menu.unity
