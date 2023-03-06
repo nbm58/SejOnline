@@ -111,10 +111,10 @@ public class GameModel : MonoBehaviour
     {
         Message.text = "Throwing the Wands...";
 
-        // Throw the wands
-        //Wand1.GetComponent<DisplayWandSide>().ThrowWand();
-        //Wand2.GetComponent<DisplayWandSide>().ThrowWand();
-        //Wand3.GetComponent<DisplayWandSide>().ThrowWand();
+        //Throw the wands
+        Wand1.GetComponent<DisplayWandSide>().ThrowWand();
+        Wand2.GetComponent<DisplayWandSide>().ThrowWand();
+        Wand3.GetComponent<DisplayWandSide>().ThrowWand();
     }
 
     /* When the event handler determines that the wands have all stopped, this
