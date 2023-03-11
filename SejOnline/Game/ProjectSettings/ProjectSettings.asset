@@ -784,7 +784,13 @@ PlayerSettings:
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
   cloudServicesEnabled:
+    Build: 0
+    Collab: 0
+    Game Performance: 0
+    Purchasing: 0
+    UDP: 0
     UNet: 1
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -799,11 +805,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 90546838-2509-4e26-9534-a4a71401168a
+  cloudProjectId: 34cd8835-c08b-47f2-a061-e3839cfdbf03
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: ' Sej Online'
-  organizationId: yarj314
+  organizationId: tam499
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 
