@@ -7,19 +7,40 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    public Button playButton;
-    public Button optionsButton;
-    public Button quitButton;
+    public GameObject mainMenu;
+
+    [SerializeField] private CanvasGroup mainMenuCanvasGroup;
+    [SerializeField] public bool fadeIn = false;
     
-    public void PlayGame()
+    public void PlayLocal()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        Debug.Log("Local Play Scene Loaded");
+        SceneManager.LoadSceneAsync("LocalGame");
+        Debug.Log("LocalGame Scene Loaded");
+    }
+
+    public void PlayOnline()
+    {
+        SceneManager.LoadSceneAsync("OnlineGame");
+        Debug.Log("OnlineGame Scene Loaded");
     }
 
     public void QuitGame()
     {
         Debug.Log("Quit");
         Application.Quit();
+    }
+
+    void Update()
+    {
+        if (fadeIn)
+        {
+            mainMenuCanvasGroup.alpha += (Time.deltaTime / 2);
+            if (mainMenuCanvasGroup.alpha >= 1)
+            {
+                fadeIn = false;
+
+                mainMenu.SetActive(true);
+            }
+        }
     }
 }

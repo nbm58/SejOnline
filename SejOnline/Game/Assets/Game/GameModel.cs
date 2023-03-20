@@ -93,12 +93,6 @@ public class GameModel : MonoBehaviour
         pass1 = false;
         pass2 = false;
 
-        ButtonP1ThrowDie.GetComponent<Button>().interactable = false;
-        //ButtonP2ThrowDie.GetComponent<Button>().interactable = false;
-
-        ButtonP1Decline.GetComponent<Button>().interactable = false;
-        //ButtonP2Decline.GetComponent<Button>().interactable = false;
-
         Message.text = "Welcome!  To begin playing, Player 1 should either throw the wands or pass.";
         paragraph = 0;
         LongMessage.SetActive(false);
@@ -403,7 +397,7 @@ public class GameModel : MonoBehaviour
             if (player2Roll == 0)
             {
                 Message.text = "Player 2 must roll...";
-//                ButtonP2ThrowDie.GetComponent<Button>().interactable = true;
+                // ButtonP2ThrowDie.GetComponent<Button>().interactable = true;
                 ThrowDice();
             }
             else
@@ -417,7 +411,7 @@ public class GameModel : MonoBehaviour
             if (player1Roll == 0)
             {
                 Message.text = "Player 1 must roll...";
-//                ButtonP1ThrowDie.GetComponent<Button>().interactable = true;
+                // ButtonP1ThrowDie.GetComponent<Button>().interactable = true;
                 ThrowDice();
             }
             else
@@ -890,8 +884,8 @@ public class GameModel : MonoBehaviour
     /* no frills exit; may save progress in later version */
     public void QuitSej()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-        Debug.Log("Main Menu Scene Loaded");
+        Debug.Log("Quitting Sej");
+        Application.Quit();
     }
 
     public void AboutSej()
