@@ -13,7 +13,6 @@ public class WandScript3 : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         WandVelocity = rb.velocity;
-        WandNumberTextScript3.WandNumber = 0;
         float dirX = Random.Range(0, 500);
         float dirY = Random.Range(0, 500);
         float dirZ = Random.Range(0, 500);

@@ -12,7 +12,6 @@ public class Hide : MonoBehaviour
     {
         if (IsMouseOverGameLog())
         {
-            StopAllCoroutines();
             ShowGameLog();
         }
         else
@@ -49,6 +48,7 @@ public class Hide : MonoBehaviour
 
     public void ShowGameLog()
     {
+        StopAllCoroutines();
         CanvasGroup.alpha = 1;
     }
 }

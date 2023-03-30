@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 
 public class DiceNumberTextScript2 : MonoBehaviour {
-
+    /*
     private TMP_Text text2;
     public static int diceNumber;
 
@@ -19,4 +19,5 @@ public class DiceNumberTextScript2 : MonoBehaviour {
 	void Update () {
         text2.text = diceNumber.ToString();
     }
+    */
 }

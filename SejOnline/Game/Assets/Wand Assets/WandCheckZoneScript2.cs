@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class WandCheckZoneScript2 : MonoBehaviour
 {
-
+    [SerializeField] private NetworkManagerUI networkManagerUI;
 	Vector3 WandVelocity;
 
 	// Update is called once per frame
 	void FixedUpdate ()
     {
-		WandVelocity = WandScript1.WandVelocity;
+		WandVelocity = WandScript2.WandVelocity;
 	}
 
 	void OnTriggerStay(Collider col)
@@ -20,16 +20,16 @@ public class WandCheckZoneScript2 : MonoBehaviour
 			switch (col.gameObject.name)
             {
             case "W2Side1":
-                WandNumberTextScript2.WandNumber = 4;
+                networkManagerUI.Wand2Value.Value = 1;
                 break;
             case "W2Side2":
-                WandNumberTextScript2.WandNumber = 3;
+                networkManagerUI.Wand2Value.Value = 2;
                 break;
             case "W2Side3":
-                WandNumberTextScript2.WandNumber = 2;
+                networkManagerUI.Wand2Value.Value = 3;
                 break;
             case "W2Side4":
-                WandNumberTextScript2.WandNumber = 1;
+                networkManagerUI.Wand2Value.Value = 4;
                 break;
             }
 		}

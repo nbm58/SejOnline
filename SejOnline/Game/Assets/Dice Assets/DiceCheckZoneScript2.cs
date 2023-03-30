@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class DiceCheckZoneScript2 : MonoBehaviour
 {
-
+    [SerializeField] private NetworkManagerUI networkManagerUI;
 	Vector3 diceVelocity;
 
 	// Update is called once per frame
 	void FixedUpdate ()
     {
-		diceVelocity = DiceScript1.diceVelocity;
+		diceVelocity = DiceScript2.DiceVelocity;
 	}
 
 	void OnTriggerStay(Collider col)
@@ -20,22 +20,22 @@ public class DiceCheckZoneScript2 : MonoBehaviour
 			switch (col.gameObject.name)
             {
             case "D2Side1":
-                DiceNumberTextScript2.diceNumber = 6;
+                networkManagerUI.Dice2Value.Value = 6;
                 break;
             case "D2Side2":
-                DiceNumberTextScript2.diceNumber = 5;
+                networkManagerUI.Dice2Value.Value = 5;
                 break;
             case "D2Side3":
-                DiceNumberTextScript2.diceNumber = 4;
+                networkManagerUI.Dice2Value.Value = 4;
                 break;
             case "D2Side4":
-                DiceNumberTextScript2.diceNumber = 3;
+                networkManagerUI.Dice2Value.Value = 3;
                 break;
             case "D2Side5":
-                DiceNumberTextScript2.diceNumber = 2;
+                networkManagerUI.Dice2Value.Value = 2;
                 break;
             case "D2Side6":
-                DiceNumberTextScript2.diceNumber = 1;
+                networkManagerUI.Dice2Value.Value = 1;
                 break;
             }
 		}

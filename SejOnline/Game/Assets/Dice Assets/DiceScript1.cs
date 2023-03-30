@@ -13,7 +13,6 @@ public class DiceScript1 : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         diceVelocity = rb.velocity;
-        DiceNumberTextScript1.diceNumber = 0;
         float dirX = Random.Range(0, 500);
         float dirY = Random.Range(0, 500);
         float dirZ = Random.Range(0, 500);

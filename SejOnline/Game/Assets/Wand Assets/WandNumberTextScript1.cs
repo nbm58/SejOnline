@@ -6,7 +6,7 @@ using TMPro;
 
 public class WandNumberTextScript1 : MonoBehaviour
 {
-
+    /*
     private TMP_Text text1;
     public static int WandNumber;
 
@@ -20,4 +20,5 @@ public class WandNumberTextScript1 : MonoBehaviour
 	void Update () {
 		text1.text = WandNumber.ToString();
     }
+    */
 }

@@ -44,14 +44,15 @@ public class NetworkManagerUI : NetworkBehaviour
     [SerializeField] private TMP_Text Wand3Display;
 
     [SerializeField] private TMP_Text GameLogDisplay;
+    [SerializeField] private Hide GameLogHideScript;
 
-    private NetworkVariable<int> Dice1Value = new NetworkVariable<int>(0);
-    private NetworkVariable<int> Dice2Value = new NetworkVariable<int>(0);
+    public NetworkVariable<int> Dice1Value = new NetworkVariable<int>(0);
+    public NetworkVariable<int> Dice2Value = new NetworkVariable<int>(0);
     private NetworkVariable<int> DiceSum = new NetworkVariable<int>(0);
 
-    private NetworkVariable<int> Wand1Value = new NetworkVariable<int>(0);
-    private NetworkVariable<int> Wand2Value = new NetworkVariable<int>(0);
-    private NetworkVariable<int> Wand3Value = new NetworkVariable<int>(0);
+    public NetworkVariable<int> Wand1Value = new NetworkVariable<int>(0);
+    public NetworkVariable<int> Wand2Value = new NetworkVariable<int>(0);
+    public NetworkVariable<int> Wand3Value = new NetworkVariable<int>(0);
     private NetworkVariable<int> WandSum = new NetworkVariable<int>(0);
 
     private NetworkVariable<int> HostScore = new NetworkVariable<int>(0);
@@ -147,6 +148,7 @@ public class NetworkManagerUI : NetworkBehaviour
             GameLog.OnValueChanged += (oldValue, newValue) =>
             {
                 GameLogDisplay.text = newValue.ToString();
+                GameLogHideScript.ShowGameLog();
             };
         }
     }
@@ -197,6 +199,15 @@ public class NetworkManagerUI : NetworkBehaviour
             Debug.Log("Dice not spawned.");
         }
 
+        if (isHostTurn.Value)
+        {
+            GameLog.Value += "Host threw wands.\n";
+        }
+        else
+        {
+            GameLog.Value += "Client threw wands.\n";
+        }
+
         wandSpawn1 = Instantiate(wand1, new Vector3(-18.0f, 2.0f, 0.0f), Quaternion.identity);
         wandSpawn2 = Instantiate(wand2, new Vector3(-19.0f, 2.0f, 0.0f), Quaternion.identity);
         wandSpawn3 = Instantiate(wand3, new Vector3(-17.0f, 2.0f, 0.0f), Quaternion.identity);
@@ -236,6 +247,15 @@ public class NetworkManagerUI : NetworkBehaviour
             Debug.Log("Dice not spawned.");
         }
 
+        if (isHostTurn.Value)
+        {
+            GameLog.Value += "Host threw dice.\n";
+        }
+        else
+        {
+            GameLog.Value += "Client threw dice.\n";
+        }
+
         diceSpawn1 = Instantiate(dice1, new Vector3(-18.0f, 2.0f, 0.0f), Quaternion.identity);
         diceSpawn2 = Instantiate(dice2, new Vector3(-19.0f, 2.0f, 0.0f), Quaternion.identity);
 
@@ -253,6 +273,10 @@ public class NetworkManagerUI : NetworkBehaviour
         yield return new WaitForSeconds(5);
 
         DiceSum.Value = Dice1Value.Value + Dice2Value.Value;
+
+        GameLog.Value += "Rolled: " + Dice1Value.Value + " and " + Dice2Value.Value + " for a total of " + DiceSum.Value + "\n";
+
+        yield return null;
     }
 
     IEnumerator SumWands()
@@ -260,5 +284,9 @@ public class NetworkManagerUI : NetworkBehaviour
         yield return new WaitForSeconds(5);
 
         WandSum.Value = Wand1Value.Value + Wand2Value.Value + Wand3Value.Value;
+
+        GameLog.Value += "Rolled: " + Wand1Value.Value + ", " + Wand2Value.Value + ", and " + Wand3Value.Value + " for a total of " + WandSum.Value + "\n";
+
+        yield return null;
     }
 }

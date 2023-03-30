@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WandCheckZoneScript1 : MonoBehaviour
 {
-
+    [SerializeField] private NetworkManagerUI networkManagerUI;
 	Vector3 WandVelocity;
 
 	// Update is called once per frame
@@ -20,16 +20,16 @@ public class WandCheckZoneScript1 : MonoBehaviour
 			switch (col.gameObject.name)
             {
             case "W1Side1":
-                WandNumberTextScript1.WandNumber = 4;
+                networkManagerUI.Wand1Value.Value = 1;
                 break;
             case "W1Side2":
-                WandNumberTextScript1.WandNumber = 3;
+                networkManagerUI.Wand1Value.Value = 2;
                 break;
             case "W1Side3":
-                WandNumberTextScript1.WandNumber = 2;
+                networkManagerUI.Wand1Value.Value = 3;
                 break;
             case "W1Side4":
-                WandNumberTextScript1.WandNumber = 1;
+                networkManagerUI.Wand1Value.Value = 4;
                 break;
             }
 		}
