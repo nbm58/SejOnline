@@ -2796,7 +2796,18 @@ MonoBehaviour:
   Wand1Display: {fileID: 1182732205}
   Wand2Display: {fileID: 26856965}
   Wand3Display: {fileID: 1635795180}
-  GameLogDisplay: {fileID: 0}
+  GameLogDisplay: {fileID: 1387827139}
+  GameLogHideScript: {fileID: 950794270}
+  Dice1Value:
+    m_InternalValue: 0
+  Dice2Value:
+    m_InternalValue: 0
+  Wand1Value:
+    m_InternalValue: 0
+  Wand2Value:
+    m_InternalValue: 0
+  Wand3Value:
+    m_InternalValue: 0
 --- !u!1 &387840153
 GameObject:
   m_ObjectHideFlags: 0
@@ -5359,9 +5370,11 @@ GameObject:
   - component: {fileID: 950794268}
   - component: {fileID: 950794267}
   - component: {fileID: 950794266}
+  - component: {fileID: 950794270}
+  - component: {fileID: 950794269}
   m_Layer: 5
   m_Name: GameLog
-  m_TagString: Untagged
+  m_TagString: GameLog
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5408,7 +5421,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 10
   m_Viewport: {fileID: 912635417}
   m_HorizontalScrollbar: {fileID: 1151824105}
   m_VerticalScrollbar: {fileID: 1438152243}
@@ -5457,6 +5470,31 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 950794264}
   m_CullTransparentMesh: 1
+--- !u!225 &950794269
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950794264}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &950794270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950794264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d4b69d11b58b68469a695e57bb2fe30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CanvasGroup: {fileID: 950794269}
 --- !u!1 &952170802
 GameObject:
   m_ObjectHideFlags: 0
@@ -9449,7 +9487,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: asdasdasd
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
@@ -16168,6 +16206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7804588ad610352408fe128923787bd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  networkManagerUI: {fileID: 382261283}
 --- !u!1 &2731639923335790166
 GameObject:
   m_ObjectHideFlags: 0
@@ -17327,6 +17366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 633c293abc95ee544bc4ce22798f4c1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  networkManagerUI: {fileID: 382261283}
 --- !u!1 &6449979171310868505
 GameObject:
   m_ObjectHideFlags: 0
@@ -22260,6 +22300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 827c25bbe60af39469b1d9ba59db8f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  networkManagerUI: {fileID: 382261283}
 --- !u!1 &8321217070348245692
 GameObject:
   m_ObjectHideFlags: 0
@@ -22336,6 +22377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf3d0781d5080bb40bfe81200d119938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  networkManagerUI: {fileID: 382261283}
 --- !u!1 &8530295536766862014
 GameObject:
   m_ObjectHideFlags: 0
@@ -22783,6 +22825,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d365e1ec1e2a5fd4fadfa33d6f19645d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  networkManagerUI: {fileID: 382261283}
 --- !u!4 &8979482035029034797
 Transform:
   m_ObjectHideFlags: 0

@@ -208,6 +208,8 @@ public class NetworkManagerUI : NetworkBehaviour
             GameLog.Value += "Client threw wands.\n";
         }
 
+        disableButtons();
+
         wandSpawn1 = Instantiate(wand1, new Vector3(-18.0f, 2.0f, 0.0f), Quaternion.identity);
         wandSpawn2 = Instantiate(wand2, new Vector3(-19.0f, 2.0f, 0.0f), Quaternion.identity);
         wandSpawn3 = Instantiate(wand3, new Vector3(-17.0f, 2.0f, 0.0f), Quaternion.identity);
@@ -256,6 +258,8 @@ public class NetworkManagerUI : NetworkBehaviour
             GameLog.Value += "Client threw dice.\n";
         }
 
+        disableButtons();
+
         diceSpawn1 = Instantiate(dice1, new Vector3(-18.0f, 2.0f, 0.0f), Quaternion.identity);
         diceSpawn2 = Instantiate(dice2, new Vector3(-19.0f, 2.0f, 0.0f), Quaternion.identity);
 
@@ -276,6 +280,8 @@ public class NetworkManagerUI : NetworkBehaviour
 
         GameLog.Value += "Rolled: " + Dice1Value.Value + " and " + Dice2Value.Value + " for a total of " + DiceSum.Value + "\n";
 
+        enableButtons();
+
         yield return null;
     }
 
@@ -287,6 +293,24 @@ public class NetworkManagerUI : NetworkBehaviour
 
         GameLog.Value += "Rolled: " + Wand1Value.Value + ", " + Wand2Value.Value + ", and " + Wand3Value.Value + " for a total of " + WandSum.Value + "\n";
 
+        enableButtons();
+
         yield return null;
+    }
+
+    private void disableButtons()
+    {
+        throwWandsButton.interactable = false;
+        throwDiceButton.interactable = false;
+        passButton.interactable = false;
+        declineButton.interactable = false;
+    }
+
+    private void enableButtons()
+    {
+        throwWandsButton.interactable = true;
+        throwDiceButton.interactable = true;
+        passButton.interactable = true;
+        declineButton.interactable = true;
     }
 }
