@@ -73,11 +73,13 @@ public class NetworkManagerUI : NetworkBehaviour
         throwWandsButton.onClick.AddListener(() =>
         {
             throwWandsServerRpc();
+            StartCoroutine(DisableButtons());
         });
 
         throwDiceButton.onClick.AddListener(() =>
         {
             throwDiceServerRpc();
+            StartCoroutine(DisableButtons());
         });
 
         passButton.onClick.AddListener(() =>
@@ -108,49 +110,46 @@ public class NetworkManagerUI : NetworkBehaviour
             }
         });
 
-        if (IsServer)
+        Dice1Value.OnValueChanged += (oldValue, newValue) =>
         {
-            Dice1Value.OnValueChanged += (oldValue, newValue) =>
-            {
-                Dice1Display.text = newValue.ToString();
-            };
+            Dice1Display.text = newValue.ToString();
+        };
 
-            Dice2Value.OnValueChanged += (oldValue, newValue) =>
-            {
-                Dice2Display.text = newValue.ToString();
-            };
+        Dice2Value.OnValueChanged += (oldValue, newValue) =>
+        {
+            Dice2Display.text = newValue.ToString();
+        };
 
-            Wand1Value.OnValueChanged += (oldValue, newValue) =>
-            {
-                Wand1Display.text = newValue.ToString();
-            };
+        Wand1Value.OnValueChanged += (oldValue, newValue) =>
+        {
+            Wand1Display.text = newValue.ToString();
+        };
 
-            Wand2Value.OnValueChanged += (oldValue, newValue) =>
-            {
-                Wand2Display.text = newValue.ToString();
-            };
+        Wand2Value.OnValueChanged += (oldValue, newValue) =>
+        {
+            Wand2Display.text = newValue.ToString();
+        };
 
-            Wand3Value.OnValueChanged += (oldValue, newValue) =>
-            {
-                Wand3Display.text = newValue.ToString();
-            };
+        Wand3Value.OnValueChanged += (oldValue, newValue) =>
+        {
+            Wand3Display.text = newValue.ToString();
+        };
 
-            HostScore.OnValueChanged += (oldValue, newValue) =>
-            {
-                HostScoreDisplay.text = newValue.ToString();
-            };
+        HostScore.OnValueChanged += (oldValue, newValue) =>
+        {
+            HostScoreDisplay.text = newValue.ToString();
+        };
 
-            ClientScore.OnValueChanged += (oldValue, newValue) =>
-            {
-                ClientScoreDisplay.text = newValue.ToString();
-            };
+        ClientScore.OnValueChanged += (oldValue, newValue) =>
+        {
+            ClientScoreDisplay.text = newValue.ToString();
+        };
 
-            GameLog.OnValueChanged += (oldValue, newValue) =>
-            {
-                GameLogDisplay.text = newValue.ToString();
-                GameLogHideScript.ShowGameLog();
-            };
-        }
+        GameLog.OnValueChanged += (oldValue, newValue) =>
+        {
+            GameLogDisplay.text = newValue.ToString();
+            GameLogHideScript.ShowGameLog();
+        };
     }
 
     [ServerRpc(RequireOwnership = false)]
@@ -208,8 +207,6 @@ public class NetworkManagerUI : NetworkBehaviour
             GameLog.Value += "Client threw wands.\n";
         }
 
-        disableButtons();
-
         wandSpawn1 = Instantiate(wand1, new Vector3(-18.0f, 2.0f, 0.0f), Quaternion.identity);
         wandSpawn2 = Instantiate(wand2, new Vector3(-19.0f, 2.0f, 0.0f), Quaternion.identity);
         wandSpawn3 = Instantiate(wand3, new Vector3(-17.0f, 2.0f, 0.0f), Quaternion.identity);
@@ -258,8 +255,6 @@ public class NetworkManagerUI : NetworkBehaviour
             GameLog.Value += "Client threw dice.\n";
         }
 
-        disableButtons();
-
         diceSpawn1 = Instantiate(dice1, new Vector3(-18.0f, 2.0f, 0.0f), Quaternion.identity);
         diceSpawn2 = Instantiate(dice2, new Vector3(-19.0f, 2.0f, 0.0f), Quaternion.identity);
 
@@ -296,6 +291,15 @@ public class NetworkManagerUI : NetworkBehaviour
         enableButtons();
 
         yield return null;
+    }
+
+    IEnumerator DisableButtons()
+    {
+        disableButtons();
+
+        yield return new WaitForSeconds(5);
+
+        enableButtons();
     }
 
     private void disableButtons()
