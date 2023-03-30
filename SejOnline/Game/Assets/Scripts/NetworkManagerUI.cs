@@ -109,7 +109,6 @@ public class NetworkManagerUI : NetworkBehaviour
 
         if (IsServer)
         {
-            // on value changed
             Dice1Value.OnValueChanged += (oldValue, newValue) =>
             {
                 Dice1Display.text = newValue.ToString();
@@ -177,9 +176,26 @@ public class NetworkManagerUI : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     private void throwWandsServerRpc(ServerRpcParams serverRpcParams = default)
     {
-        wandSpawn1.GetComponent<NetworkObject>().Despawn();
-        wandSpawn2.GetComponent<NetworkObject>().Despawn();
-        wandSpawn3.GetComponent<NetworkObject>().Despawn();
+        try
+        {
+            wandSpawn1.GetComponent<NetworkObject>().Despawn();
+            wandSpawn2.GetComponent<NetworkObject>().Despawn();
+            wandSpawn3.GetComponent<NetworkObject>().Despawn();
+        }
+        catch
+        {
+            Debug.Log("Wands not spawned.");
+        }
+
+        try
+        {
+            diceSpawn1.GetComponent<NetworkObject>().Despawn();
+            diceSpawn2.GetComponent<NetworkObject>().Despawn();
+        }
+        catch
+        {
+            Debug.Log("Dice not spawned.");
+        }
 
         wandSpawn1 = Instantiate(wand1, new Vector3(-18.0f, 2.0f, 0.0f), Quaternion.identity);
         wandSpawn2 = Instantiate(wand2, new Vector3(-19.0f, 2.0f, 0.0f), Quaternion.identity);
@@ -192,13 +208,33 @@ public class NetworkManagerUI : NetworkBehaviour
         wandSpawn1.GetComponent<WandScript1>().Roll();
         wandSpawn2.GetComponent<WandScript2>().Roll();
         wandSpawn3.GetComponent<WandScript3>().Roll();
+
+        StartCoroutine(SumWands());
     }
 
     [ServerRpc(RequireOwnership = false)]
     private void throwDiceServerRpc(ServerRpcParams serverRpcParams = default)
     {
-        diceSpawn1.GetComponent<NetworkObject>().Despawn();
-        diceSpawn2.GetComponent<NetworkObject>().Despawn();
+        try
+        {
+            wandSpawn1.GetComponent<NetworkObject>().Despawn();
+            wandSpawn2.GetComponent<NetworkObject>().Despawn();
+            wandSpawn3.GetComponent<NetworkObject>().Despawn();
+        }
+        catch
+        {
+            Debug.Log("Wands not spawned.");
+        }
+
+        try
+        {
+            diceSpawn1.GetComponent<NetworkObject>().Despawn();
+            diceSpawn2.GetComponent<NetworkObject>().Despawn();
+        }
+        catch
+        {
+            Debug.Log("Dice not spawned.");
+        }
 
         diceSpawn1 = Instantiate(dice1, new Vector3(-18.0f, 2.0f, 0.0f), Quaternion.identity);
         diceSpawn2 = Instantiate(dice2, new Vector3(-19.0f, 2.0f, 0.0f), Quaternion.identity);
@@ -208,5 +244,21 @@ public class NetworkManagerUI : NetworkBehaviour
 
         diceSpawn1.GetComponent<DiceScript1>().Roll();
         diceSpawn2.GetComponent<DiceScript2>().Roll();
+
+        StartCoroutine(SumDice());
+    }
+
+    IEnumerator SumDice()
+    {
+        yield return new WaitForSeconds(5);
+
+        DiceSum.Value = Dice1Value.Value + Dice2Value.Value;
+    }
+
+    IEnumerator SumWands()
+    {
+        yield return new WaitForSeconds(5);
+
+        WandSum.Value = Wand1Value.Value + Wand2Value.Value + Wand3Value.Value;
     }
 }
