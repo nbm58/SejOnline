@@ -83,10 +83,6 @@ public class Relay : MonoBehaviour
         NetworkManager.Singleton.GetComponent<UnityTransport>().SetRelayServerData(relayServerData);
         NetworkManager.Singleton.StartHost();
 
-        GameObject networkManagerUI = GameObject.Find("RelaySystem");
-        networkManagerUI.GetComponent<NetworkManagerUI>().spawnWandsServerRpc();
-        networkManagerUI.GetComponent<NetworkManagerUI>().spawnDiceServerRpc();
-
         yield return null;
     }
 
