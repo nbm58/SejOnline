@@ -174,6 +174,24 @@ public class NetworkManagerUI : NetworkBehaviour
                 TurnDisplay.text = "Client's Turn";
             }
         };
+
+        if (isHostTurn.Value)
+        {
+            if (IsHost)
+            {
+                throwWandsButton.interactable = true;
+                throwDiceButton.interactable = true;
+                passButton.interactable = true;
+                declineButton.interactable = true;
+            }
+            else
+            {
+                throwWandsButton.interactable = false;
+                throwDiceButton.interactable = false;
+                passButton.interactable = false;
+                declineButton.interactable = false;
+            }
+        }
     }
 
     void Update()
