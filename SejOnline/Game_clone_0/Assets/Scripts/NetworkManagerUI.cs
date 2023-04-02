@@ -62,8 +62,17 @@ public class NetworkManagerUI : NetworkBehaviour
 
     private NetworkVariable<FixedString4096Bytes> GameLog = new NetworkVariable<FixedString4096Bytes>("");
 
+    private PlayerData playerData;
+
     public override void OnNetworkSpawn()
     {
+        playerData = GetComponent<PlayerData>();
+        
+        if (HostScore.Value == 100 || ClientScore.Value == 100)
+        {
+            GameOverServerRpc();
+        }
+        
         if (IsServer)
         {
             spawnWandsServerRpc();
@@ -316,5 +325,55 @@ public class NetworkManagerUI : NetworkBehaviour
         throwDiceButton.interactable = true;
         passButton.interactable = true;
         declineButton.interactable = true;
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    private void GameOverServerRpc(ServerRpcParams serverRpcParams = default)
+    {
+        if (HostScore.Value >= 100)
+        {
+            GameLog.Value += "Host wins!\n";
+            GameLog.Value += "Game over.\n";
+            disableButtons();
+        }
+        else
+        {
+            GameLog.Value += "Client wins!\n";
+            GameLog.Value += "Game over.\n";
+            disableButtons();
+        }
+
+        HandleStatsClientRpc();
+    }
+
+    [ClientRpc]
+    private void HandleStatsClientRpc()
+    {
+        if (HostScore.Value >= 100)
+        {
+            if (IsHost)
+            {
+                playerData.incrementWins();
+                playerData.incrementGamesPlayed();
+            }
+            else
+            {
+                playerData.incrementLosses();
+                playerData.incrementGamesPlayed();
+            }
+        }
+        else
+        {
+            if (IsHost)
+            {
+                playerData.incrementLosses();
+                playerData.incrementGamesPlayed();
+            }
+            else
+            {
+                playerData.incrementWins();
+                playerData.incrementGamesPlayed();
+            }
+        }
     }
 }
