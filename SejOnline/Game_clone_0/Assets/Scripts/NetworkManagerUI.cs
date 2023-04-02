@@ -35,6 +35,7 @@ public class NetworkManagerUI : NetworkBehaviour
 
     [SerializeField] private TMP_Text HostScoreDisplay;
     [SerializeField] private TMP_Text ClientScoreDisplay;
+    [SerializeField] private TMP_Text TurnDisplay;
 
     [SerializeField] private TMP_Text Dice1Display;
     [SerializeField] private TMP_Text Dice2Display;
@@ -159,6 +160,25 @@ public class NetworkManagerUI : NetworkBehaviour
             GameLogDisplay.text = newValue.ToString();
             GameLogHideScript.ShowGameLog();
         };
+
+        isHostTurn.OnValueChanged += (oldValue, newValue) =>
+        {
+            if (newValue)
+            {
+                GameLog.Value += "It is now Host's turn.\n";
+                TurnDisplay.text = "Host's Turn";
+            }
+            else
+            {
+                GameLog.Value += "It is now Client's turn.\n";
+                TurnDisplay.text = "Client's Turn";
+            }
+        };
+    }
+
+    void Update()
+    {
+        
     }
 
     [ServerRpc(RequireOwnership = false)]
