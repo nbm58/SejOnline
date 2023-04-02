@@ -353,12 +353,12 @@ public class NetworkManagerUI : NetworkBehaviour
         {
             if (IsHost)
             {
-                playerData.incrementWins();
+                playerData.incrementGamesWon();
                 playerData.incrementGamesPlayed();
             }
             else
             {
-                playerData.incrementLosses();
+                playerData.incrementGamesLost();
                 playerData.incrementGamesPlayed();
             }
         }
@@ -366,12 +366,12 @@ public class NetworkManagerUI : NetworkBehaviour
         {
             if (IsHost)
             {
-                playerData.incrementLosses();
+                playerData.incrementGamesLost();
                 playerData.incrementGamesPlayed();
             }
             else
             {
-                playerData.incrementWins();
+                playerData.incrementGamesWon();
                 playerData.incrementGamesPlayed();
             }
         }
