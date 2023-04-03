@@ -35,6 +35,7 @@ public class NetworkManagerUI : NetworkBehaviour
 
     [SerializeField] private TMP_Text HostScoreDisplay;
     [SerializeField] private TMP_Text ClientScoreDisplay;
+    [SerializeField] private TMP_Text TurnDisplay;
 
     [SerializeField] private TMP_Text Dice1Display;
     [SerializeField] private TMP_Text Dice2Display;
@@ -50,10 +51,9 @@ public class NetworkManagerUI : NetworkBehaviour
     public NetworkVariable<int> Dice2Value = new NetworkVariable<int>(0);
     private NetworkVariable<int> DiceSum = new NetworkVariable<int>(0);
 
-    public NetworkVariable<int> Wand1Value = new NetworkVariable<int>(0);
-    public NetworkVariable<int> Wand2Value = new NetworkVariable<int>(0);
-    public NetworkVariable<int> Wand3Value = new NetworkVariable<int>(0);
-    private NetworkVariable<int> WandSum = new NetworkVariable<int>(0);
+    public NetworkVariable<FixedString32Bytes> Wand1Value = new NetworkVariable<FixedString32Bytes>("");
+    public NetworkVariable<FixedString32Bytes> Wand2Value = new NetworkVariable<FixedString32Bytes>("");
+    public NetworkVariable<FixedString32Bytes> Wand3Value = new NetworkVariable<FixedString32Bytes>("");
 
     private NetworkVariable<int> HostScore = new NetworkVariable<int>(0);
     private NetworkVariable<int> ClientScore = new NetworkVariable<int>(0);
@@ -62,8 +62,12 @@ public class NetworkManagerUI : NetworkBehaviour
 
     private NetworkVariable<FixedString4096Bytes> GameLog = new NetworkVariable<FixedString4096Bytes>("");
 
+    private PlayerData playerData;
+
     public override void OnNetworkSpawn()
     {
+        playerData = GetComponent<PlayerData>();
+        
         if (IsServer)
         {
             spawnWandsServerRpc();
@@ -150,6 +154,40 @@ public class NetworkManagerUI : NetworkBehaviour
             GameLogDisplay.text = newValue.ToString();
             GameLogHideScript.ShowGameLog();
         };
+
+        isHostTurn.OnValueChanged += (oldValue, newValue) =>
+        {
+            if (newValue)
+            {
+                GameLog.Value += "It is now Host's turn.\n";
+                TurnDisplay.text = "Host's Turn";
+            }
+            else
+            {
+                GameLog.Value += "It is now Client's turn.\n";
+                TurnDisplay.text = "Client's Turn";
+            }
+        };
+
+        if (isHostTurn.Value)
+        {
+            if (IsHost)
+            {
+                enableButtons();
+            }
+            else
+            {
+                disableButtons();
+            }
+        }
+    }
+
+    void Update()
+    {
+        if (HostScore.Value == 100 || ClientScore.Value == 100)
+        {
+            GameOverServerRpc();
+        }
     }
 
     [ServerRpc(RequireOwnership = false)]
@@ -219,7 +257,7 @@ public class NetworkManagerUI : NetworkBehaviour
         wandSpawn2.GetComponent<WandScript2>().Roll();
         wandSpawn3.GetComponent<WandScript3>().Roll();
 
-        StartCoroutine(SumWands());
+        StartCoroutine(DisplayWands());
     }
 
     [ServerRpc(RequireOwnership = false)]
@@ -280,13 +318,11 @@ public class NetworkManagerUI : NetworkBehaviour
         yield return null;
     }
 
-    IEnumerator SumWands()
+    IEnumerator DisplayWands()
     {
         yield return new WaitForSeconds(5);
 
-        WandSum.Value = Wand1Value.Value + Wand2Value.Value + Wand3Value.Value;
-
-        GameLog.Value += "Rolled: " + Wand1Value.Value + ", " + Wand2Value.Value + ", and " + Wand3Value.Value + " for a total of " + WandSum.Value + "\n";
+        GameLog.Value += "Rolled: " + Wand1Value.Value + ", " + Wand2Value.Value + ", and " + Wand3Value.Value + "\n";
 
         enableButtons();
 
@@ -316,5 +352,55 @@ public class NetworkManagerUI : NetworkBehaviour
         throwDiceButton.interactable = true;
         passButton.interactable = true;
         declineButton.interactable = true;
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    private void GameOverServerRpc(ServerRpcParams serverRpcParams = default)
+    {
+        if (HostScore.Value >= 100)
+        {
+            GameLog.Value += "Host wins!\n";
+            GameLog.Value += "Game over.\n";
+            disableButtons();
+        }
+        else
+        {
+            GameLog.Value += "Client wins!\n";
+            GameLog.Value += "Game over.\n";
+            disableButtons();
+        }
+
+        HandleStatsClientRpc();
+    }
+
+    [ClientRpc]
+    private void HandleStatsClientRpc()
+    {
+        if (HostScore.Value >= 100)
+        {
+            if (IsHost)
+            {
+                playerData.incrementGamesWon();
+                playerData.incrementGamesPlayed();
+            }
+            else
+            {
+                playerData.incrementGamesLost();
+                playerData.incrementGamesPlayed();
+            }
+        }
+        else
+        {
+            if (IsHost)
+            {
+                playerData.incrementGamesLost();
+                playerData.incrementGamesPlayed();
+            }
+            else
+            {
+                playerData.incrementGamesWon();
+                playerData.incrementGamesPlayed();
+            }
+        }
     }
 }

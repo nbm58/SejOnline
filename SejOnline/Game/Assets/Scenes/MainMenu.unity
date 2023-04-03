@@ -2791,6 +2791,7 @@ MonoBehaviour:
   dice2: {fileID: 8530295536766862014}
   HostScoreDisplay: {fileID: 6449979172977716855}
   ClientScoreDisplay: {fileID: 1434126039}
+  TurnDisplay: {fileID: 6449979173379518152}
   Dice1Display: {fileID: 6449979172758360027}
   Dice2Display: {fileID: 6449979171380656093}
   Wand1Display: {fileID: 1182732205}
@@ -6938,7 +6939,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1407814349}
+      - m_Target: {fileID: 1666432779}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -10191,7 +10192,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1407814349}
+      - m_Target: {fileID: 1726978186}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -21574,7 +21575,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Host's Turn
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -21663,7 +21664,7 @@ GameObject:
   - component: {fileID: 6449979173379518153}
   - component: {fileID: 6449979173379518152}
   m_Layer: 5
-  m_Name: CurrentTurn
+  m_Name: TurnDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
