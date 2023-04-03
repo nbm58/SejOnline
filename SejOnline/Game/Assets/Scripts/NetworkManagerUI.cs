@@ -173,7 +173,10 @@ public class NetworkManagerUI : NetworkBehaviour
         {
             if (IsHost)
             {
-                enableButtons();
+                throwWandsButton.interactable = true;
+                throwDiceButton.interactable = false;
+                passButton.interactable = false;
+                declineButton.interactable = false;
             }
             else
             {
