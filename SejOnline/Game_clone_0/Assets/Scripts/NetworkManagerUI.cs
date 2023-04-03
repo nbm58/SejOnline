@@ -69,11 +69,6 @@ public class NetworkManagerUI : NetworkBehaviour
     {
         playerData = GetComponent<PlayerData>();
         
-        if (HostScore.Value == 100 || ClientScore.Value == 100)
-        {
-            GameOverServerRpc();
-        }
-        
         if (IsServer)
         {
             spawnWandsServerRpc();
@@ -179,24 +174,21 @@ public class NetworkManagerUI : NetworkBehaviour
         {
             if (IsHost)
             {
-                throwWandsButton.interactable = true;
-                throwDiceButton.interactable = true;
-                passButton.interactable = true;
-                declineButton.interactable = true;
+                enableButtons();
             }
             else
             {
-                throwWandsButton.interactable = false;
-                throwDiceButton.interactable = false;
-                passButton.interactable = false;
-                declineButton.interactable = false;
+                disableButtons();
             }
         }
     }
 
     void Update()
     {
-        
+        if (HostScore.Value == 100 || ClientScore.Value == 100)
+        {
+            GameOverServerRpc();
+        }
     }
 
     [ServerRpc(RequireOwnership = false)]
