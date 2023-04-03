@@ -126,4 +126,67 @@ public class PlayerData : MonoBehaviour
 
         Debug.Log("No games played or games won found");
     }
+
+    public async void incrementGamesPlayed()
+    {
+        Dictionary<string, string> gamesPlayedDict = await CloudSaveService.Instance.Data.LoadAsync(new HashSet<string>{"gamesPlayed"});
+
+        if (gamesPlayedDict.ContainsKey("gamesPlayed"))
+        {
+            var gamesPlayed = gamesPlayedDict["gamesPlayed"];
+
+            var data = new Dictionary<string, object>{{"gamesPlayed", (int.Parse(gamesPlayed) + 1).ToString()}};
+            await CloudSaveService.Instance.Data.ForceSaveAsync(data);
+
+            Debug.Log("Games played incremented");
+
+            fetchGamesPlayed();
+
+            return;
+        }
+
+        Debug.Log("No games played found");
+    }
+
+    public async void incrementGamesWon()
+    {
+        Dictionary<string, string> gamesWonDict = await CloudSaveService.Instance.Data.LoadAsync(new HashSet<string>{"gamesWon"});
+
+        if (gamesWonDict.ContainsKey("gamesWon"))
+        {
+            var gamesWon = gamesWonDict["gamesWon"];
+
+            var data = new Dictionary<string, object>{{"gamesWon", (int.Parse(gamesWon) + 1).ToString()}};
+            await CloudSaveService.Instance.Data.ForceSaveAsync(data);
+
+            Debug.Log("Games won incremented");
+
+            fetchGamesWon();
+
+            return;
+        }
+
+        Debug.Log("No games won found");
+    }
+
+    public async void incrementGamesLost()
+    {
+        Dictionary<string, string> gamesLostDict = await CloudSaveService.Instance.Data.LoadAsync(new HashSet<string>{"gamesLost"});
+
+        if (gamesLostDict.ContainsKey("gamesLost"))
+        {
+            var gamesLost = gamesLostDict["gamesLost"];
+
+            var data = new Dictionary<string, object>{{"gamesLost", (int.Parse(gamesLost) + 1).ToString()}};
+            await CloudSaveService.Instance.Data.ForceSaveAsync(data);
+
+            Debug.Log("Games lost incremented");
+
+            fetchGamesLost();
+
+            return;
+        }
+
+        Debug.Log("No games lost found");
+    }
 }
