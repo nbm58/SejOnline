@@ -14,17 +14,17 @@ using TMPro;
 
 public class NetworkManagerUI : NetworkBehaviour
 {
-    public Button throwWandsButton;
-    public Button throwDiceButton;
-    public Button passButton;
-    public Button declineButton;
+    [SerializeField] private Button throwWandsButton;
+    [SerializeField] private Button throwDiceButton;
+    [SerializeField] private Button passButton;
+    [SerializeField] private Button declineButton;
 
-    public GameObject wand1;
-    public GameObject wand2;
-    public GameObject wand3;
+    [SerializeField] private GameObject wand1;
+    [SerializeField] private GameObject wand2;
+    [SerializeField] private GameObject wand3;
 
-    public GameObject dice1;
-    public GameObject dice2;
+    [SerializeField] private GameObject dice1;
+    [SerializeField] private GameObject dice2;
 
     GameObject wandSpawn1;
     GameObject wandSpawn2;
@@ -405,5 +405,26 @@ public class NetworkManagerUI : NetworkBehaviour
                 playerData.incrementGamesPlayed();
             }
         }
+    }
+
+    public void handleQuitGame()
+    {
+        NetworkManager.Singleton.Shutdown();
+
+        GameLog.Value = "";
+        HostScore.Value = 0;
+        ClientScore.Value = 0;
+        Wand1Value.Value = "";
+        Wand2Value.Value = "";
+        Wand3Value.Value = "";
+        Dice1Value.Value = 0;
+        Dice2Value.Value = 0;
+        DiceSum.Value = 0;
+        isHostTurn.Value = true;
+
+        throwWandsButton.onClick.RemoveAllListeners();
+        throwDiceButton.onClick.RemoveAllListeners();
+        passButton.onClick.RemoveAllListeners();
+        declineButton.onClick.RemoveAllListeners();
     }
 }
