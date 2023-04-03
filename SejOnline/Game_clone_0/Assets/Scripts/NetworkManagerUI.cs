@@ -51,10 +51,9 @@ public class NetworkManagerUI : NetworkBehaviour
     public NetworkVariable<int> Dice2Value = new NetworkVariable<int>(0);
     private NetworkVariable<int> DiceSum = new NetworkVariable<int>(0);
 
-    public NetworkVariable<int> Wand1Value = new NetworkVariable<int>(0);
-    public NetworkVariable<int> Wand2Value = new NetworkVariable<int>(0);
-    public NetworkVariable<int> Wand3Value = new NetworkVariable<int>(0);
-    private NetworkVariable<int> WandSum = new NetworkVariable<int>(0);
+    public NetworkVariable<FixedString32Bytes> Wand1Value = new NetworkVariable<FixedString32Bytes>("");
+    public NetworkVariable<FixedString32Bytes> Wand2Value = new NetworkVariable<FixedString32Bytes>("");
+    public NetworkVariable<FixedString32Bytes> Wand3Value = new NetworkVariable<FixedString32Bytes>("");
 
     private NetworkVariable<int> HostScore = new NetworkVariable<int>(0);
     private NetworkVariable<int> ClientScore = new NetworkVariable<int>(0);
@@ -258,7 +257,7 @@ public class NetworkManagerUI : NetworkBehaviour
         wandSpawn2.GetComponent<WandScript2>().Roll();
         wandSpawn3.GetComponent<WandScript3>().Roll();
 
-        StartCoroutine(SumWands());
+        StartCoroutine(DisplayWands());
     }
 
     [ServerRpc(RequireOwnership = false)]
@@ -319,13 +318,11 @@ public class NetworkManagerUI : NetworkBehaviour
         yield return null;
     }
 
-    IEnumerator SumWands()
+    IEnumerator DisplayWands()
     {
         yield return new WaitForSeconds(5);
 
-        WandSum.Value = Wand1Value.Value + Wand2Value.Value + Wand3Value.Value;
-
-        GameLog.Value += "Rolled: " + Wand1Value.Value + ", " + Wand2Value.Value + ", and " + Wand3Value.Value + " for a total of " + WandSum.Value + "\n";
+        GameLog.Value += "Rolled: " + Wand1Value.Value + ", " + Wand2Value.Value + ", and " + Wand3Value.Value + "\n";
 
         enableButtons();
 
