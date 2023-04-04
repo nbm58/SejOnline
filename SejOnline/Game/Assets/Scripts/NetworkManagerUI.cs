@@ -9,18 +9,22 @@ using UnityEngine.UI;
 using Unity.Netcode;
 using Unity.Netcode.Transports.UTP;
 using UnityEngine.SceneManagement;
+using Unity.Collections;
+using TMPro;
 
 public class NetworkManagerUI : NetworkBehaviour
 {
-    public Button throwWandsButton;
-    public Button throwDiceButton;
+    [SerializeField] private Button throwWandsButton;
+    [SerializeField] private Button throwDiceButton;
+    [SerializeField] private Button passButton;
+    [SerializeField] private Button declineButton;
 
-    public GameObject wand1;
-    public GameObject wand2;
-    public GameObject wand3;
+    [SerializeField] private GameObject wand1;
+    [SerializeField] private GameObject wand2;
+    [SerializeField] private GameObject wand3;
 
-    public GameObject dice1;
-    public GameObject dice2;
+    [SerializeField] private GameObject dice1;
+    [SerializeField] private GameObject dice2;
 
     GameObject wandSpawn1;
     GameObject wandSpawn2;
@@ -29,17 +33,164 @@ public class NetworkManagerUI : NetworkBehaviour
     GameObject diceSpawn1;
     GameObject diceSpawn2;
 
-    private void Awake()
+    [SerializeField] private TMP_Text HostScoreDisplay;
+    [SerializeField] private TMP_Text ClientScoreDisplay;
+    [SerializeField] private TMP_Text TurnDisplay;
+
+    [SerializeField] private TMP_Text Dice1Display;
+    [SerializeField] private TMP_Text Dice2Display;
+
+    [SerializeField] private TMP_Text Wand1Display;
+    [SerializeField] private TMP_Text Wand2Display;
+    [SerializeField] private TMP_Text Wand3Display;
+
+    [SerializeField] private TMP_Text GameLogDisplay;
+    [SerializeField] private Hide GameLogHideScript;
+
+    public NetworkVariable<int> Dice1Value = new NetworkVariable<int>(0);
+    public NetworkVariable<int> Dice2Value = new NetworkVariable<int>(0);
+    private NetworkVariable<int> DiceSum = new NetworkVariable<int>(0);
+
+    public NetworkVariable<FixedString32Bytes> Wand1Value = new NetworkVariable<FixedString32Bytes>("");
+    public NetworkVariable<FixedString32Bytes> Wand2Value = new NetworkVariable<FixedString32Bytes>("");
+    public NetworkVariable<FixedString32Bytes> Wand3Value = new NetworkVariable<FixedString32Bytes>("");
+
+    private NetworkVariable<int> HostScore = new NetworkVariable<int>(0);
+    private NetworkVariable<int> ClientScore = new NetworkVariable<int>(0);
+
+    private NetworkVariable<bool> isHostTurn = new NetworkVariable<bool>(true);
+
+    private NetworkVariable<FixedString4096Bytes> GameLog = new NetworkVariable<FixedString4096Bytes>("");
+
+    private PlayerData playerData;
+
+    public override void OnNetworkSpawn()
     {
+        playerData = GetComponent<PlayerData>();
+        
+        if (IsServer)
+        {
+            spawnWandsServerRpc();
+            spawnDiceServerRpc();
+        }
+        
         throwWandsButton.onClick.AddListener(() =>
         {
             throwWandsServerRpc();
+            StartCoroutine(DisableButtons());
         });
 
         throwDiceButton.onClick.AddListener(() =>
         {
             throwDiceServerRpc();
+            StartCoroutine(DisableButtons());
         });
+
+        passButton.onClick.AddListener(() =>
+        {
+            if (isHostTurn.Value)
+            {
+                isHostTurn.Value = false;
+                GameLog.Value += "Host passed. It is now Client's turn. ";
+            }
+            else
+            {
+                isHostTurn.Value = true;
+                GameLog.Value += "Client passed. It is now Host's turn. ";
+            }
+        });
+
+        declineButton.onClick.AddListener(() =>
+        {
+            if (isHostTurn.Value)
+            {
+                isHostTurn.Value = false;
+                GameLog.Value += "Host declined. It is now Client's turn. ";
+            }
+            else
+            {
+                isHostTurn.Value = true;
+                GameLog.Value += "Client declined. It is now Host's turn. ";
+            }
+        });
+
+        Dice1Value.OnValueChanged += (oldValue, newValue) =>
+        {
+            Dice1Display.text = newValue.ToString();
+        };
+
+        Dice2Value.OnValueChanged += (oldValue, newValue) =>
+        {
+            Dice2Display.text = newValue.ToString();
+        };
+
+        Wand1Value.OnValueChanged += (oldValue, newValue) =>
+        {
+            Wand1Display.text = newValue.ToString();
+        };
+
+        Wand2Value.OnValueChanged += (oldValue, newValue) =>
+        {
+            Wand2Display.text = newValue.ToString();
+        };
+
+        Wand3Value.OnValueChanged += (oldValue, newValue) =>
+        {
+            Wand3Display.text = newValue.ToString();
+        };
+
+        HostScore.OnValueChanged += (oldValue, newValue) =>
+        {
+            HostScoreDisplay.text = newValue.ToString();
+        };
+
+        ClientScore.OnValueChanged += (oldValue, newValue) =>
+        {
+            ClientScoreDisplay.text = newValue.ToString();
+        };
+
+        GameLog.OnValueChanged += (oldValue, newValue) =>
+        {
+            GameLogDisplay.text = newValue.ToString();
+            GameLogHideScript.ShowGameLog();
+        };
+
+        isHostTurn.OnValueChanged += (oldValue, newValue) =>
+        {
+            if (newValue)
+            {
+                GameLog.Value += "It is now Host's turn.\n";
+                TurnDisplay.text = "Host's Turn";
+            }
+            else
+            {
+                GameLog.Value += "It is now Client's turn.\n";
+                TurnDisplay.text = "Client's Turn";
+            }
+        };
+
+        if (isHostTurn.Value)
+        {
+            if (IsHost)
+            {
+                throwWandsButton.interactable = true;
+                throwDiceButton.interactable = false;
+                passButton.interactable = false;
+                declineButton.interactable = false;
+            }
+            else
+            {
+                disableButtons();
+            }
+        }
+    }
+
+    void Update()
+    {
+        if (HostScore.Value == 100 || ClientScore.Value == 100)
+        {
+            GameOverServerRpc();
+        }
     }
 
     [ServerRpc(RequireOwnership = false)]
@@ -67,9 +218,35 @@ public class NetworkManagerUI : NetworkBehaviour
     [ServerRpc(RequireOwnership = false)]
     private void throwWandsServerRpc(ServerRpcParams serverRpcParams = default)
     {
-        wandSpawn1.GetComponent<NetworkObject>().Despawn();
-        wandSpawn2.GetComponent<NetworkObject>().Despawn();
-        wandSpawn3.GetComponent<NetworkObject>().Despawn();
+        try
+        {
+            wandSpawn1.GetComponent<NetworkObject>().Despawn();
+            wandSpawn2.GetComponent<NetworkObject>().Despawn();
+            wandSpawn3.GetComponent<NetworkObject>().Despawn();
+        }
+        catch
+        {
+            Debug.Log("Wands not spawned.");
+        }
+
+        try
+        {
+            diceSpawn1.GetComponent<NetworkObject>().Despawn();
+            diceSpawn2.GetComponent<NetworkObject>().Despawn();
+        }
+        catch
+        {
+            Debug.Log("Dice not spawned.");
+        }
+
+        if (isHostTurn.Value)
+        {
+            GameLog.Value += "Host threw wands.\n";
+        }
+        else
+        {
+            GameLog.Value += "Client threw wands.\n";
+        }
 
         wandSpawn1 = Instantiate(wand1, new Vector3(-18.0f, 2.0f, 0.0f), Quaternion.identity);
         wandSpawn2 = Instantiate(wand2, new Vector3(-19.0f, 2.0f, 0.0f), Quaternion.identity);
@@ -82,13 +259,42 @@ public class NetworkManagerUI : NetworkBehaviour
         wandSpawn1.GetComponent<WandScript1>().Roll();
         wandSpawn2.GetComponent<WandScript2>().Roll();
         wandSpawn3.GetComponent<WandScript3>().Roll();
+
+        StartCoroutine(DisplayWands());
     }
 
     [ServerRpc(RequireOwnership = false)]
     private void throwDiceServerRpc(ServerRpcParams serverRpcParams = default)
     {
-        diceSpawn1.GetComponent<NetworkObject>().Despawn();
-        diceSpawn2.GetComponent<NetworkObject>().Despawn();
+        try
+        {
+            wandSpawn1.GetComponent<NetworkObject>().Despawn();
+            wandSpawn2.GetComponent<NetworkObject>().Despawn();
+            wandSpawn3.GetComponent<NetworkObject>().Despawn();
+        }
+        catch
+        {
+            Debug.Log("Wands not spawned.");
+        }
+
+        try
+        {
+            diceSpawn1.GetComponent<NetworkObject>().Despawn();
+            diceSpawn2.GetComponent<NetworkObject>().Despawn();
+        }
+        catch
+        {
+            Debug.Log("Dice not spawned.");
+        }
+
+        if (isHostTurn.Value)
+        {
+            GameLog.Value += "Host threw dice.\n";
+        }
+        else
+        {
+            GameLog.Value += "Client threw dice.\n";
+        }
 
         diceSpawn1 = Instantiate(dice1, new Vector3(-18.0f, 2.0f, 0.0f), Quaternion.identity);
         diceSpawn2 = Instantiate(dice2, new Vector3(-19.0f, 2.0f, 0.0f), Quaternion.identity);
@@ -98,5 +304,127 @@ public class NetworkManagerUI : NetworkBehaviour
 
         diceSpawn1.GetComponent<DiceScript1>().Roll();
         diceSpawn2.GetComponent<DiceScript2>().Roll();
+
+        StartCoroutine(SumDice());
+    }
+
+    IEnumerator SumDice()
+    {
+        yield return new WaitForSeconds(5);
+
+        DiceSum.Value = Dice1Value.Value + Dice2Value.Value;
+
+        GameLog.Value += "Rolled: " + Dice1Value.Value + " and " + Dice2Value.Value + " for a total of " + DiceSum.Value + "\n";
+
+        enableButtons();
+
+        yield return null;
+    }
+
+    IEnumerator DisplayWands()
+    {
+        yield return new WaitForSeconds(5);
+
+        GameLog.Value += "Rolled: " + Wand1Value.Value + ", " + Wand2Value.Value + ", and " + Wand3Value.Value + "\n";
+
+        enableButtons();
+
+        yield return null;
+    }
+
+    IEnumerator DisableButtons()
+    {
+        disableButtons();
+
+        yield return new WaitForSeconds(5);
+
+        enableButtons();
+    }
+
+    private void disableButtons()
+    {
+        throwWandsButton.interactable = false;
+        throwDiceButton.interactable = false;
+        passButton.interactable = false;
+        declineButton.interactable = false;
+    }
+
+    private void enableButtons()
+    {
+        throwWandsButton.interactable = true;
+        throwDiceButton.interactable = true;
+        passButton.interactable = true;
+        declineButton.interactable = true;
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    private void GameOverServerRpc(ServerRpcParams serverRpcParams = default)
+    {
+        if (HostScore.Value >= 100)
+        {
+            GameLog.Value += "Host wins!\n";
+            GameLog.Value += "Game over.\n";
+            disableButtons();
+        }
+        else
+        {
+            GameLog.Value += "Client wins!\n";
+            GameLog.Value += "Game over.\n";
+            disableButtons();
+        }
+
+        HandleStatsClientRpc();
+    }
+
+    [ClientRpc]
+    private void HandleStatsClientRpc()
+    {
+        if (HostScore.Value >= 100)
+        {
+            if (IsHost)
+            {
+                playerData.incrementGamesWon();
+                playerData.incrementGamesPlayed();
+            }
+            else
+            {
+                playerData.incrementGamesLost();
+                playerData.incrementGamesPlayed();
+            }
+        }
+        else
+        {
+            if (IsHost)
+            {
+                playerData.incrementGamesLost();
+                playerData.incrementGamesPlayed();
+            }
+            else
+            {
+                playerData.incrementGamesWon();
+                playerData.incrementGamesPlayed();
+            }
+        }
+    }
+
+    public void handleQuitGame()
+    {
+        NetworkManager.Singleton.Shutdown();
+
+        GameLog.Value = "";
+        HostScore.Value = 0;
+        ClientScore.Value = 0;
+        Wand1Value.Value = "";
+        Wand2Value.Value = "";
+        Wand3Value.Value = "";
+        Dice1Value.Value = 0;
+        Dice2Value.Value = 0;
+        DiceSum.Value = 0;
+        isHostTurn.Value = true;
+
+        throwWandsButton.onClick.RemoveAllListeners();
+        throwDiceButton.onClick.RemoveAllListeners();
+        passButton.onClick.RemoveAllListeners();
+        declineButton.onClick.RemoveAllListeners();
     }
 }
