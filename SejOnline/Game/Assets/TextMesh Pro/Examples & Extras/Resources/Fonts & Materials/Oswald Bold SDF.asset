@@ -1136,10 +1136,6 @@ MonoBehaviour:
     m_Width: 5
     m_Height: 22
   - m_X: 486
-    m_Y: 102
-    m_Width: 537
-    m_Height: 921
-  - m_X: 486
     m_Y: 99
     m_Width: 7
     m_Height: 924
@@ -1235,6 +1231,22 @@ MonoBehaviour:
     m_Y: 0
     m_Width: 76
     m_Height: 1023
+  - m_X: 486
+    m_Y: 174
+    m_Width: 537
+    m_Height: 849
+  - m_X: 486
+    m_Y: 102
+    m_Width: 135
+    m_Height: 921
+  - m_X: 677
+    m_Y: 102
+    m_Width: 346
+    m_Height: 921
+  - m_X: 677
+    m_Y: 79
+    m_Width: 1
+    m_Height: 944
   m_fontInfo:
     Name: Oswald
     PointSize: 71
