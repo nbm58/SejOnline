@@ -20,22 +20,22 @@ public class DiceCheckZoneScript2 : MonoBehaviour
 			switch (col.gameObject.name)
             {
             case "D2Side1":
-                networkManagerUI.Dice2Value.Value = 6;
+                networkManagerUI.setDice2Value(6);
                 break;
             case "D2Side2":
-                networkManagerUI.Dice2Value.Value = 5;
+                networkManagerUI.setDice2Value(5);
                 break;
             case "D2Side3":
-                networkManagerUI.Dice2Value.Value = 4;
+                networkManagerUI.setDice2Value(4);
                 break;
             case "D2Side4":
-                networkManagerUI.Dice2Value.Value = 3;
+                networkManagerUI.setDice2Value(3);
                 break;
             case "D2Side5":
-                networkManagerUI.Dice2Value.Value = 2;
+                networkManagerUI.setDice2Value(2);
                 break;
             case "D2Side6":
-                networkManagerUI.Dice2Value.Value = 1;
+                networkManagerUI.setDice2Value(1);
                 break;
             }
 		}
