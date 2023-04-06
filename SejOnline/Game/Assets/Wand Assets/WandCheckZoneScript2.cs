@@ -20,16 +20,16 @@ public class WandCheckZoneScript2 : MonoBehaviour
 			switch (col.gameObject.name)
             {
             case "W2Side1":
-                networkManagerUI.Wand2Value.Value = "White";
+                networkManagerUI.setWand2Value("White");
                 break;
             case "W2Side2":
-                networkManagerUI.Wand2Value.Value = "Black";
+                networkManagerUI.setWand2Value("Black");
                 break;
             case "W2Side3":
-                networkManagerUI.Wand2Value.Value = "Ship";
+                networkManagerUI.setWand2Value("Ship");
                 break;
             case "W2Side4":
-                networkManagerUI.Wand2Value.Value = "Star";
+                networkManagerUI.setWand2Value("Star");
                 break;
             }
 		}
