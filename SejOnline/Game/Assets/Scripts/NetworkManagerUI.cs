@@ -77,8 +77,8 @@ public class NetworkManagerUI : NetworkBehaviour
 
     public override void OnNetworkSpawn()
     {
-        playerData = GetComponent<PlayerData>();
-        relayScript = GetComponent<Relay>();
+        playerData = GameObject.Find("DBManager").GetComponent<PlayerData>();
+        relayScript = GameObject.Find("RelaySystem").GetComponent<Relay>();
         
         if (IsServer)
         {
@@ -98,12 +98,12 @@ public class NetworkManagerUI : NetworkBehaviour
 
         passButton.onClick.AddListener(() =>
         {
-            Pass();
+            PassServerRpc();
         });
 
         declineButton.onClick.AddListener(() =>
         {
-            DeclineHand();
+            DeclineHandServerRpc();
         });
 
         Dice1Value.OnValueChanged += (oldValue, newValue) =>
@@ -487,11 +487,11 @@ public class NetworkManagerUI : NetworkBehaviour
         // Set the UI appropriately
         if (hostWandControl.Value)
         {
-            decidePlayOnRollUIClientRpc(true);
+            setUIClientRpc(true, false, true, true, true);
         }
         else
         {
-            decidePlayOnRollUIClientRpc(false);
+            setUIClientRpc(false, false, true, true, true);
         }
 
         hand.Value = true;  // we're now playing the hand...
@@ -562,9 +562,9 @@ public class NetworkManagerUI : NetworkBehaviour
             GameLog.Value += "Host rolled " + tally.ToString() + "\n";
             if (clientRollValue.Value == 0)
             {
-                GameLog.Value += "Client must roll...\n";
+                GameLog.Value += "Client must roll the dice...\n";
                 
-                rollDiceUIClientRpc(false);
+                setUIClientRpc(false, false, true, false, false);
             }
             else
             {
@@ -578,9 +578,9 @@ public class NetworkManagerUI : NetworkBehaviour
             GameLog.Value += "Client rolled " + tally.ToString() + "\n";
             if (hostRollValue.Value == 0)
             {
-                GameLog.Value += "Host must roll...\n";
+                GameLog.Value += "Host must roll the dice...\n";
                 
-                rollDiceUIClientRpc(true);
+                setUIClientRpc(true, false, true, false, false);
             }
             else
             {
@@ -589,19 +589,15 @@ public class NetworkManagerUI : NetworkBehaviour
         }
     }
 
-    public void DeclineHand()
+    [ServerRpc(RequireOwnership = false)]
+    public void DeclineHandServerRpc(ServerRpcParams serverRpcParams = default)
     {
-        disableButtons();
         if (hostWandControl.Value)
         {
             hostWandControl.Value = false;
             hostDieControl.Value = false;
 
-            if (!IsHost)
-            {
-                throwWandsButton.GetComponent<Button>().interactable = true;
-                passButton.GetComponent<Button>().interactable = true;
-            }
+            setUIClientRpc(false, true, false, true, false);
 
             GameLog.Value += "Hand declined. Passing wands to client...\n";
         }
@@ -610,11 +606,7 @@ public class NetworkManagerUI : NetworkBehaviour
             hostWandControl.Value = true;
             hostDieControl.Value = true;
 
-            if (IsHost)
-            {
-                throwWandsButton.GetComponent<Button>().interactable = true;
-                passButton.GetComponent<Button>().interactable = true;
-            }
+            setUIClientRpc(true, true, false, true, false);
 
             GameLog.Value += "Hand declined. Passing wands to host...\n";
         }
@@ -624,21 +616,22 @@ public class NetworkManagerUI : NetworkBehaviour
         pass2.Value = false;
     }
 
-    public void Pass()
+    [ServerRpc(RequireOwnership = false)]
+    public void PassServerRpc(ServerRpcParams serverRpcParams = default)
     {
         if (!hand.Value)
         {
-            PassWands();
+            PassWandsServerRpc();
         }
         else
         {
-            PassDice();
+            PassDiceServerRpc();
         }
     }
 
-    public void PassWands()
+    [ServerRpc(RequireOwnership = false)]
+    public void PassWandsServerRpc(ServerRpcParams serverRpcParams = default)
     {
-        disableButtons();
         if (!pass1.Value)
             pass1.Value = true;
         else if (!pass2.Value)
@@ -650,11 +643,13 @@ public class NetworkManagerUI : NetworkBehaviour
             hostWandControl.Value = false;
             hostDieControl.Value = false;
 
-            if (!IsHost)
+            if (!pass2.Value)
             {
-                throwWandsButton.GetComponent<Button>().interactable = true;
-                if (!pass2.Value)
-                    passButton.GetComponent<Button>().interactable = true;
+                setUIClientRpc(false, true, false, true, false);
+            }
+            else
+            {
+                setUIClientRpc(false, true, false, false, false);
             }
 
             GameLog.Value += "Passing wands to client...\n";
@@ -664,41 +659,39 @@ public class NetworkManagerUI : NetworkBehaviour
             hostWandControl.Value = true;
             hostDieControl.Value = true;
 
-            if (IsHost)
+            if (!pass2.Value)
             {
-                throwWandsButton.GetComponent<Button>().interactable = true;
-                if (!pass2.Value)
-                    passButton.GetComponent<Button>().interactable = true;
+                setUIClientRpc(true, true, false, true, false);
+            }
+            else
+            {
+                setUIClientRpc(true, true, false, false, false);
             }
 
             GameLog.Value += "Passing wands to host...\n";
         }
     }
 
-    public void PassDice()
+    [ServerRpc(RequireOwnership = false)]
+    public void PassDiceServerRpc(ServerRpcParams serverRpcParams = default)
     {
-        disableButtons();
         if (!pass1.Value)
         {
             pass1.Value = true;
             if (hostDieControl.Value)
             {
                 hostDieControl.Value = false;
-                if(!IsHost)
-                {
-                    throwDiceButton.GetComponent<Button>().interactable = true;
-                    passButton.GetComponent<Button>().interactable = true;
-                }
+                
+                setUIClientRpc(false, false, true, true, false);
+                
                 GameLog.Value += "Passing dice to client...\n";
             }
             else
             {
                 hostDieControl.Value = true;
-                if (IsHost)
-                {
-                    throwDiceButton.GetComponent<Button>().interactable = true;
-                    passButton.GetComponent<Button>().interactable = true;
-                }
+                
+                setUIClientRpc(true, false, true, true, false);
+                
                 GameLog.Value += "Passing dice to host...\n";
             }
         }
@@ -812,12 +805,18 @@ public class NetworkManagerUI : NetworkBehaviour
         if (HostScore.Value >= 100)
         {
             GameLog.Value += "Host wins!\n";
-            GameOverServerRpc();
+            GameLog.Value += "Game over!\n";
+            GameLog.Value += "Press the QUIT button to return to the menu...\n";
+            
+            HandleStatsClientRpc();
         }
         else if (ClientScore.Value >= 100)
         {
             GameLog.Value += "Client wins!\n";
-            GameOverServerRpc();
+            GameLog.Value += "Game over!\n";
+            GameLog.Value += "Press the QUIT button to return to the menu...\n";
+            
+            HandleStatsClientRpc();
         }
         else if (playIndex >= playList.Count)  // if out of plays, back to wands
         {
@@ -830,7 +829,7 @@ public class NetworkManagerUI : NetworkBehaviour
                 hostWandControl.Value = false;
                 hostDieControl.Value = false;
 
-                decidePlayOnWandsClientRpc(true);
+                setUIClientRpc(false, true, false, true, false);
 
                 GameLog.Value += "Next hand starting with client...\n";
             }
@@ -839,7 +838,7 @@ public class NetworkManagerUI : NetworkBehaviour
                 hostWandControl.Value = true;
                 hostDieControl.Value = true;
 
-                decidePlayOnWandsClientRpc(false);
+                setUIClientRpc(true, true, false, true, false);
 
                 GameLog.Value += "Next hand starting with host...\n";
             }
@@ -856,7 +855,7 @@ public class NetworkManagerUI : NetworkBehaviour
                 hostWandControl.Value = false;
                 hostDieControl.Value = false;
 
-                decidePlayOnWandsClientRpc(true);
+                setUIClientRpc(false, true, false, true, false);
 
                 GameLog.Value += "Next hand starting with client...\n"; 
             }
@@ -865,7 +864,7 @@ public class NetworkManagerUI : NetworkBehaviour
                 hostWandControl.Value = true;
                 hostDieControl.Value = true;
 
-                decidePlayOnWandsClientRpc(false);
+                setUIClientRpc(true, true, false, true, false);
 
                 GameLog.Value += "Next hand starting with host...\n";
             }
@@ -902,31 +901,18 @@ public class NetworkManagerUI : NetworkBehaviour
             {
                 GameLog.Value += "Next play starting with host...\n";
 
-                decidePlayOnWandsClientRpc(true);
+                setUIClientRpc(true, false, true, true, false);
             }
             else
             {
                 GameLog.Value += "Next play starting with client...\n";
 
-                decidePlayOnWandsClientRpc(false);
+                setUIClientRpc(false, false, true, true, false);
             }
         }
 
         hostRollValue.Value = 0;
         clientRollValue.Value = 0;
-    }
-
-    IEnumerator SumDice()
-    {
-        yield return new WaitForSeconds(5);
-
-        DiceSum.Value = Dice1Value.Value + Dice2Value.Value;
-
-        GameLog.Value += "Rolled: " + Dice1Value.Value + " and " + Dice2Value.Value + " for a total of " + DiceSum.Value + "\n";
-
-        enableButtons();
-
-        yield return null;
     }
 
     IEnumerator DisableButtons()
@@ -955,16 +941,16 @@ public class NetworkManagerUI : NetworkBehaviour
     }
 
     [ClientRpc]
-    private void rollDiceUIClientRpc(bool hostTurn)
+    private void setUIClientRpc(bool hostTurn, bool wands, bool dice, bool pass, bool decline)
     {
         if (hostTurn)
         {
             if (IsHost)
             {
-                throwWandsButton.interactable = false;
-                throwDiceButton.interactable = true;
-                passButton.interactable = false;
-                declineButton.interactable = false;
+                throwWandsButton.interactable = wands;
+                throwDiceButton.interactable = dice;
+                passButton.interactable = pass;
+                declineButton.interactable = decline;
             }
             else
             {
@@ -985,109 +971,12 @@ public class NetworkManagerUI : NetworkBehaviour
             }
             else
             {
-                throwWandsButton.interactable = false;
-                throwDiceButton.interactable = true;
-                passButton.interactable = false;
-                declineButton.interactable = false;
+                throwWandsButton.interactable = wands;
+                throwDiceButton.interactable = dice;
+                passButton.interactable = pass;
+                declineButton.interactable = decline;
             }
         }
-    }
-
-    [ClientRpc]
-    private void decidePlayOnRollUIClientRpc(bool hostTurn)
-    {
-        if (hostTurn)
-        {
-            if (IsHost)
-            {
-                throwWandsButton.interactable = false;
-                throwDiceButton.interactable = true;
-                passButton.interactable = true;
-                declineButton.interactable = true;
-            }
-            else
-            {
-                throwWandsButton.interactable = false;
-                throwDiceButton.interactable = false;
-                passButton.interactable = false;
-                declineButton.interactable = false;
-            }
-        }
-        else
-        {
-            if (IsHost)
-            {
-                throwWandsButton.interactable = false;
-                throwDiceButton.interactable = false;
-                passButton.interactable = false;
-                declineButton.interactable = false;
-            }
-            else
-            {
-                throwWandsButton.interactable = false;
-                throwDiceButton.interactable = true;
-                passButton.interactable = true;
-                declineButton.interactable = true;
-            }
-        }
-    }
-
-    [ClientRpc]
-    private void decidePlayOnWandsClientRpc(bool hostTurn)
-    {
-        if (hostTurn)
-        {
-            if (IsHost)
-            {
-                throwWandsButton.interactable = true;
-                throwDiceButton.interactable = false;
-                passButton.interactable = true;
-                declineButton.interactable = false;
-            }
-            else
-            {
-                throwWandsButton.interactable = false;
-                throwDiceButton.interactable = false;
-                passButton.interactable = false;
-                declineButton.interactable = false;
-            }
-        }
-        else
-        {
-            if (IsHost)
-            {
-                throwWandsButton.interactable = false;
-                throwDiceButton.interactable = false;
-                passButton.interactable = false;
-                declineButton.interactable = false;
-            }
-            else
-            {
-                throwWandsButton.interactable = true;
-                throwDiceButton.interactable = false;
-                passButton.interactable = true;
-                declineButton.interactable = false;
-            }
-        }
-    }
-
-    [ServerRpc(RequireOwnership = false)]
-    private void GameOverServerRpc(ServerRpcParams serverRpcParams = default)
-    {
-        if (HostScore.Value >= 100)
-        {
-            GameLog.Value += "Host wins!\n";
-            GameLog.Value += "Game over.\n";
-            disableButtons();
-        }
-        else
-        {
-            GameLog.Value += "Client wins!\n";
-            GameLog.Value += "Game over.\n";
-            disableButtons();
-        }
-
-        HandleStatsClientRpc();
     }
 
     [ClientRpc]
