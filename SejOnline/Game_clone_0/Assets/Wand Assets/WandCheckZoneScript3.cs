@@ -20,16 +20,16 @@ public class WandCheckZoneScript3 : MonoBehaviour
 			switch (col.gameObject.name)
             {
             case "W3Side1":
-                networkManagerUI.Wand3Value.Value = "White";
+                networkManagerUI.setWand3Value("White");
                 break;
             case "W3Side2":
-                networkManagerUI.Wand3Value.Value = "Black";
+                networkManagerUI.setWand3Value("Black");
                 break;
             case "W3Side3":
-                networkManagerUI.Wand3Value.Value = "Ship";
+                networkManagerUI.setWand3Value("Ship");
                 break;
             case "W3Side4":
-                networkManagerUI.Wand3Value.Value = "Star";
+                networkManagerUI.setWand3Value("Star");
                 break;
             }
         }
