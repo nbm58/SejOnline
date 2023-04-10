@@ -141,6 +141,12 @@ public class Relay : MonoBehaviour
     public void StartHost()
     {
         StartCoroutine(ConfigureTransportAndStartNgoAsHost());
+
+        MenuUI.SetActive(false);
+        MenuCamera.SetActive(false);
+        GameUI.SetActive(true);
+        GameSpace.SetActive(true);
+        GameCamera.SetActive(true);
     }
 
     public void StartClient()
