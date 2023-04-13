@@ -944,7 +944,7 @@ public class NetworkManagerUI : NetworkBehaviour
         declineButton.interactable = true;
     }
 
-    [ServerRpc]
+    [ServerRpc(RequireOwnership = false)]
     private void playRollSoundServerRpc(ServerRpcParams serverRpcParams = default)
     {
         playRollSoundClientRpc();
