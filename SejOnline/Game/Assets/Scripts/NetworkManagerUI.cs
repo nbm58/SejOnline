@@ -71,6 +71,7 @@ public class NetworkManagerUI : NetworkBehaviour
 
     private PlayerData playerData;
     private Relay relayScript;
+    private ButtonController buttonControllerScript;
 
     private List<int> playList;
     private int playIndex;
@@ -79,6 +80,7 @@ public class NetworkManagerUI : NetworkBehaviour
     {
         playerData = GameObject.Find("DBManager").GetComponent<PlayerData>();
         relayScript = GameObject.Find("RelaySystem").GetComponent<Relay>();
+        buttonControllerScript = GameObject.Find("ButtonController").GetComponent<ButtonController>();
         
         if (IsServer)
         {
@@ -217,6 +219,7 @@ public class NetworkManagerUI : NetworkBehaviour
 
     public void ThrowWands()
     {
+        playRollSoundServerRpc();
         throwWandsServerRpc();
         StartCoroutine(SortWands());
     }
@@ -501,6 +504,7 @@ public class NetworkManagerUI : NetworkBehaviour
 
     public void ThrowDice()
     {
+        playRollSoundServerRpc();
         throwDiceServerRpc();
         StartCoroutine(TallyDice());
     }
@@ -938,6 +942,18 @@ public class NetworkManagerUI : NetworkBehaviour
         throwDiceButton.interactable = true;
         passButton.interactable = true;
         declineButton.interactable = true;
+    }
+
+    [ServerRpc(RequireOwnership = false)]
+    private void playRollSoundServerRpc(ServerRpcParams serverRpcParams = default)
+    {
+        playRollSoundClientRpc();
+    }
+
+    [ClientRpc]
+    private void playRollSoundClientRpc()
+    {
+        buttonControllerScript.PlayRoll();
     }
 
     [ClientRpc]
