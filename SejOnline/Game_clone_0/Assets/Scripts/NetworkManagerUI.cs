@@ -220,6 +220,7 @@ public class NetworkManagerUI : NetworkBehaviour
     public void ThrowWands()
     {
         playRollSoundServerRpc();
+        disableButtons();
         throwWandsServerRpc();
         StartCoroutine(SortWands());
     }
@@ -505,6 +506,7 @@ public class NetworkManagerUI : NetworkBehaviour
     public void ThrowDice()
     {
         playRollSoundServerRpc();
+        disableButtons();
         throwDiceServerRpc();
         StartCoroutine(TallyDice());
     }
