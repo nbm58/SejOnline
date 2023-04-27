@@ -1030,6 +1030,14 @@ public class NetworkManagerUI : NetworkBehaviour
 
     public void handleQuitGame()
     {
+        handleQuitGameServerRpc();
+    }
+    
+    [ServerRpc(RequireOwnership = false)]
+    private void handleQuitGameServerRpc(ServerRpcParams serverRpcParams = default)
+    {
+        GameLog.Value = "Opponent has left the game.\nPlease press the quit button to return to the menu...\n";
+        
         try
         {
             relayScript.CloseConnection();
