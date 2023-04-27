@@ -19,6 +19,8 @@ public class NetworkManagerUI : NetworkBehaviour
     [SerializeField] private Button passButton;
     [SerializeField] private Button declineButton;
 
+    [SerializeField] private GameObject quitGameNotification;
+
     [SerializeField] private GameObject wand1;
     [SerializeField] private GameObject wand2;
     [SerializeField] private GameObject wand3;
@@ -1030,14 +1032,8 @@ public class NetworkManagerUI : NetworkBehaviour
 
     public void handleQuitGame()
     {
-        handleQuitGameServerRpc();
-    }
-    
-    [ServerRpc(RequireOwnership = false)]
-    private void handleQuitGameServerRpc(ServerRpcParams serverRpcParams = default)
-    {
-        GameLog.Value = "Opponent has left the game.\nPlease press the quit button to return to the menu...\n";
-        
+        handleQuitGameServerRpc(IsHost);
+
         try
         {
             relayScript.CloseConnection();
@@ -1046,6 +1042,17 @@ public class NetworkManagerUI : NetworkBehaviour
         {
             Debug.Log("Relay script not found or failed to close connection: " + e);
         }
+
+        throwWandsButton.onClick.RemoveAllListeners();
+        throwDiceButton.onClick.RemoveAllListeners();
+        passButton.onClick.RemoveAllListeners();
+        declineButton.onClick.RemoveAllListeners();
+    }
+    
+    [ServerRpc(RequireOwnership = false)]
+    private void handleQuitGameServerRpc(bool isHost, ServerRpcParams serverRpcParams = default)
+    {
+        notifyQuitGameClientRpc(isHost);
 
         GameLog.Value = "";
         HostScore.Value = 0;
@@ -1063,11 +1070,33 @@ public class NetworkManagerUI : NetworkBehaviour
         pass1.Value = false;
         pass2.Value = false;
         hand.Value = false;
+    }
 
-        throwWandsButton.onClick.RemoveAllListeners();
-        throwDiceButton.onClick.RemoveAllListeners();
-        passButton.onClick.RemoveAllListeners();
-        declineButton.onClick.RemoveAllListeners();
+    [ClientRpc]
+    private void notifyQuitGameClientRpc(bool isHost)
+    {
+        if (isHost)
+        {
+            if (IsHost)
+            {
+                
+            }
+            else
+            {
+                quitGameNotification.SetActive(true);
+            }
+        }
+        else
+        {
+            if (IsHost)
+            {
+                quitGameNotification.SetActive(true);
+            }
+            else
+            {
+                
+            }
+        }
     }
 
     public void setWand1Value(string value)
