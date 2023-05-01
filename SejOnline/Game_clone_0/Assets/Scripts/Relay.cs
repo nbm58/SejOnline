@@ -30,6 +30,7 @@ public class Relay : MonoBehaviour
     public GameObject GameCamera;
     public GameObject GameUI;
     public GameObject GameSpace;
+    public GameObject joinErrorMessage;
 
     private void Awake()
     {
@@ -95,7 +96,7 @@ public class Relay : MonoBehaviour
         }
         catch
         {
-            Debug.LogError("Relay create join code request failed");
+            Debug.LogError("Relay join allocation request failed");
             throw;
         }
 
@@ -120,6 +121,7 @@ public class Relay : MonoBehaviour
         if (clientRelayUtilityTask.IsFaulted)
         {
             Debug.LogError("Exception thrown when attempting to connect to Relay Server. Exception: " + clientRelayUtilityTask.Exception.Message);
+            joinErrorMessage.SetActive(true);
             yield break;
         }
 

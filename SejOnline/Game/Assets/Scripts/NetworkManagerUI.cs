@@ -50,6 +50,7 @@ public class NetworkManagerUI : NetworkBehaviour
     [SerializeField] private Hide GameLogHideScript;
 
     [SerializeField] private TMP_Text relayJoinCode;
+    [SerializeField] private GameObject joinErrorMessage;
 
     public NetworkVariable<int> Dice1Value = new NetworkVariable<int>(0);
     public NetworkVariable<int> Dice2Value = new NetworkVariable<int>(0);
@@ -1046,6 +1047,7 @@ public class NetworkManagerUI : NetworkBehaviour
         }
 
         relayJoinCode.text = "";
+        joinErrorMessage.SetActive(false);
 
         throwWandsButton.onClick.RemoveAllListeners();
         throwDiceButton.onClick.RemoveAllListeners();
