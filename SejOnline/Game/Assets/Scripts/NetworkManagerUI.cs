@@ -49,6 +49,8 @@ public class NetworkManagerUI : NetworkBehaviour
     [SerializeField] private TMP_Text GameLogDisplay;
     [SerializeField] private Hide GameLogHideScript;
 
+    [SerializeField] private TMP_Text relayJoinCode;
+
     public NetworkVariable<int> Dice1Value = new NetworkVariable<int>(0);
     public NetworkVariable<int> Dice2Value = new NetworkVariable<int>(0);
     private NetworkVariable<int> DiceSum = new NetworkVariable<int>(0);
@@ -1042,6 +1044,8 @@ public class NetworkManagerUI : NetworkBehaviour
         {
             Debug.Log("Relay script not found or failed to close connection: " + e);
         }
+
+        relayJoinCode.text = "";
 
         throwWandsButton.onClick.RemoveAllListeners();
         throwDiceButton.onClick.RemoveAllListeners();

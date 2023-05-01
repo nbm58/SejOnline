@@ -4614,6 +4614,7 @@ MonoBehaviour:
   Wand3Display: {fileID: 1635795180}
   GameLogDisplay: {fileID: 1387827139}
   GameLogHideScript: {fileID: 950794270}
+  relayJoinCode: {fileID: 127954259}
   Dice1Value:
     m_InternalValue: 0
   Dice2Value:
