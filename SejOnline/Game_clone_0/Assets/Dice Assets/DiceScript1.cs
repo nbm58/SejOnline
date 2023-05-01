@@ -13,13 +13,13 @@ public class DiceScript1 : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         diceVelocity = rb.velocity;
-        float dirX = Random.Range(0, 500);
-        float dirY = Random.Range(0, 500);
-        float dirZ = Random.Range(0, 500);
-        transform.position = new Vector3(-16, 4, 0);
+        float dirX = Random.Range(200, 400);
+        float dirY = Random.Range(200, 400);
+        float dirZ = Random.Range(200, 400);
+        transform.position = new Vector3(-18, 2, 0);
         transform.rotation = Quaternion.identity;
-        rb.AddForce(transform.up * 600);
-        rb.AddForce(transform.right * 700);
+        rb.AddForce(transform.up * 1000);
+        rb.AddForce(transform.right * 800);
         rb.AddTorque(dirX, dirY, dirZ);
     }
 
