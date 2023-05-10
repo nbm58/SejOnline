@@ -24,7 +24,7 @@ public class registration : MonoBehaviour
   form.AddField("password",passwordInputField.text);
      
   //server location
-  string uri = "nickolasmaxwell.com/register.php";
+  string uri = "";
 
   //"Create a socket on easymode"
   // connect to the server, and pass it the form, return failure
