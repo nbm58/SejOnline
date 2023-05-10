@@ -27,7 +27,7 @@ public class loginUser : MonoBehaviour
      form.AddField("username", nameInputField.text);
      form.AddField("password",passwordInputField.text);
      
-     string uri = "nickolasmaxwell.com/login.php";
+     string uri = "";
      //create connection @ uri, with form data
      using(UnityWebRequest request = UnityWebRequest.Post(uri,form))
      {
